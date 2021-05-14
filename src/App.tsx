@@ -1,27 +1,42 @@
+// Packages
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, useLocation } from 'react-router-dom';
+
+// Styles and animations
+import { GlobalStyle } from './styles/globalStyle';
+import { AnimatePresence } from 'framer-motion';
+
+//Pages
+import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
+import { WorksPage } from './pages/WorksPage';
+import { ContactPage } from './pages/ContactPage';
+import { FaqPage } from './pages/FaqPage';
+
+// Components
+import { Navbar } from './components/Navbar'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1>What is up</h1>
-      </header>
-    </div>
-  );
+	let backgroundColor;
+	const location = useLocation();
+	location.pathname === "/services" || location.pathname==="/contact" ? backgroundColor ="#EAE8DC" : backgroundColor = "#1B1B1B";
+	
+    return (
+		<div className="App" style={{background: backgroundColor}}>
+			<GlobalStyle />
+			<Navbar />
+			<AnimatePresence exitBeforeEnter>
+				<Switch location={location} key={location.pathname}>
+					<Route  exact path="/" component={HomePage} />
+					<Route exact path="/services" component={ServicesPage} />
+					<Route exact path="/works" component={WorksPage} />
+					<Route exact path="/faq" component={FaqPage} />
+					<Route exact path="/contact" component={ContactPage} />
+				</Switch>
+			</AnimatePresence>
+		</div>
+    );
 }
 
 export default App;
+ 
