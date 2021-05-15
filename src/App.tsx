@@ -1,5 +1,5 @@
 // Packages
-import React from 'react';
+import { useState } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 
 // Styles and animations
@@ -17,6 +17,8 @@ import { FaqPage } from './pages/FaqPage';
 import { Navbar } from './components/Navbar'
 
 function App() {
+	const [navbarOpen, setNavbarOpen] = useState(false);
+
 	let backgroundColor;
 	const location = useLocation();
 	location.pathname === "/services" || location.pathname==="/contact" ? backgroundColor ="#EAE8DC" : backgroundColor = "#1B1B1B";
@@ -24,7 +26,7 @@ function App() {
     return (
 		<div className="App" style={{background: backgroundColor}}>
 			<GlobalStyle />
-			<Navbar />
+			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route  exact path="/" component={HomePage} />
