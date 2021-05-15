@@ -26,7 +26,7 @@ function App() {
     return (
 		<div className="App" style={{background: backgroundColor}}>
 			<GlobalStyle />
-			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
+			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={backgroundColor}/>
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route  exact path="/" component={HomePage} />

@@ -4,18 +4,26 @@ import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 
+// Styles and animations
+import { useScroll } from '../styles/scrollTriggers';
+import { logoDisappear } from '../styles/animations';
+
 // Photos and Logos
 import himo_logo from '../img/himo_logo.png';
 
 interface INavbar {
     navbarOpen: boolean,
     setNavbarOpen: React.Dispatch<React.SetStateAction<boolean>>
+    navColor: string
 }
 
 export const Navbar: FunctionComponent<INavbar> = (props) => { 
     const location = useLocation().pathname;
     let textColor;
-    location === "/services" || location==="/contact" ? textColor ="#1B1B1B" : textColor = "#EAE8DC";
+    location === "/services" || location==="/contact" ? textColor = "#1B1B1B" : textColor = "#EAE8DC";
+
+    // Hooks and States
+    const [element, controls] = useScroll(0.5);
 
     // Event handlers
     const openNavbarHandler: () => void = () => {
@@ -23,11 +31,11 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
     }
 
     return (
-        <SNav>
+        <SNav style={{background: props.navColor}}>
             <div className="logo">
                 <Link to="/">
-                    <img id="logo-img" src={himo_logo} alt="Himo Studio Logo"/>
-                    <h1 id="logo-text" >HIMO STUDIO_</h1>
+                    <motion.img id="logo-img" src={himo_logo} alt="Himo Studio Logo"/>
+                    <h1 id="logo-text">HIMO STUDIO_</h1>
                 </Link>
             </div>
             <div className={`nav-links-wrapper ${props.navbarOpen ? 'open-nav' : ''}`}>
@@ -69,19 +77,20 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
 
 export const SNav = styled.div`
     display: flex;
-    background: transparent;
     padding: 2rem 10rem;
     min-height: 10vh;
-    position: sticky;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
 
     ul {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
     }
+
 
     #logo-text {
         font-family: 'Montserrat', sans-serif;

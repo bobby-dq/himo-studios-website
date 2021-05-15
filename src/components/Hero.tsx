@@ -1,4 +1,7 @@
+// Packages
 import { FunctionComponent } from 'react';
+import styled from 'styled-components';
+
 
 export const Hero: FunctionComponent = () => {
 
@@ -76,3 +79,4 @@ export const Hero: FunctionComponent = () => {
         </div>
     );
 }
+
