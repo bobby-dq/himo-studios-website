@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 
 // Styles and animations
-import { heroWaveAnimation, logoDisappear } from '../styles/animations'
+import { heroWaveAnimation } from '../styles/animations'
 
 export const Hero: FunctionComponent = () => {
 

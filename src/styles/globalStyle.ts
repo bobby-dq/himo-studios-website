@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     a, li {
         text-decoration: none;
     }
