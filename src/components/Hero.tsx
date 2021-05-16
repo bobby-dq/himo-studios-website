@@ -1,32 +1,36 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'
 
+// Styles and animations
+import { heroWaveAnimation, logoDisappear } from '../styles/animations'
 
 export const Hero: FunctionComponent = () => {
 
     return (
-        <div className="hero">
+        <SHero>
             <div className="hero-title">
                 <div className="tiny-text">
-                    <p>Unparalleled Craftmanship</p>
+                    <p>UNPARALLELED CRAFTMANSHIP</p>
                 </div>
-                <div className="main-title">
-                    <div>
+                <motion.div className="main-title">
+                    <div className="main-title-text">
                         <h2>Expand your brand's</h2>
                     </div>
-                    <div>
-                        <h2>online presence</h2>
+                    <div className="main-title-text colored-text">
+                        <h2 className="colored-text">online presence</h2>
                     </div>
-                    <div>
+                    <div className="main-title-text">
                         <h2>with expert advice</h2>
                     </div>
-                </div>
-                <button>Get Started</button>
+                </motion.div>
+                <Link to="/contact">Get Started</Link>
             </div>
             <div className="hero-img">
-            <svg width="533" height="307" viewBox="0 0 533 307" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0)">
+                <svg width="533" height="307" viewBox="0 0 533 307" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0)">
                 <path d="M115.486 272.51C130.795 272.51 143.205 260.069 143.205 244.723C143.205 229.377 130.795 216.936 115.486 216.936C100.178 216.936 87.7673 229.377 87.7673 244.723C87.7673 260.069 100.178 272.51 115.486 272.51Z" fill="#F2F2F2"/>
                 <path d="M119.994 268.443C135.302 268.443 147.713 256.003 147.713 240.657C147.713 225.31 135.302 212.87 119.994 212.87C104.685 212.87 92.2747 225.31 92.2747 240.657C92.2747 256.003 104.685 268.443 119.994 268.443Z" fill="#E88073"/>
                 <path d="M485.276 209.911H142.317V210.849H485.276V209.911Z" fill="#D8C3A4"/>
@@ -76,7 +80,65 @@ export const Hero: FunctionComponent = () => {
                 </defs>
                 </svg>
             </div>
-        </div>
+            <SWave viewBox="0 0 1440 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.path variants={heroWaveAnimation} initial="hidden" animate="show" d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331 227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165 49.0556 -4.21721 8.32998 0.487081 5" stroke="#D6AB78" strokeOpacity="0.2" strokeWidth="10"/>
+            </SWave>
+        </SHero>
     );
 }
+
+const SHero = styled.div`
+    min-height: 50vh;
+    padding: 1rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .main-title {
+        margin-bottom: 3rem;
+        h2 {
+            font-size: 3.6rem;
+            font-weight: lighter;
+            font-family: 'Playfair Display', serif;
+            color: #EAE8DA;      
+        }
+
+        .colored-text {
+            color: #E88073;
+        }
+
+    }
+
+   
+
+    .hero-img, .hero-title{
+        z-index: 2;
+    }
+
+    .hero-title {
+        a {
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: #1b1b1b;
+            padding: 0.2rem 1rem;
+            font-family: 'Playfair Display', serif;
+            background: #E85A50;
+        }
+    }
+
+    .tiny-text {
+        font-size: 1.4rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.50rem;
+        color: #817676
+    }
+`;
+
+const SWave = styled.svg`
+    position: absolute;
+    left: 0;
+`;
+
+
 

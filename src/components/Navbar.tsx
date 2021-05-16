@@ -3,27 +3,30 @@ import { FunctionComponent } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // Styles and animations
 import { useScroll } from '../styles/scrollTriggers';
-import { logoDisappear } from '../styles/animations';
 
 // Photos and Logos
 import himo_logo from '../img/himo_logo.png';
 
 interface INavbar {
     navbarOpen: boolean,
-    setNavbarOpen: React.Dispatch<React.SetStateAction<boolean>>
-    navColor: string
+    setNavbarOpen: React.Dispatch<React.SetStateAction<boolean>>,
+    navColor: string,
 }
 
 export const Navbar: FunctionComponent<INavbar> = (props) => { 
     const location = useLocation().pathname;
     let textColor;
     location === "/services" || location==="/contact" ? textColor = "#1B1B1B" : textColor = "#EAE8DC";
+    // console.log(props.showLogo);
 
     // Hooks and States
-    const [element, controls] = useScroll(0.5);
+    
+	const [element,  view] = useInView({threshold: [1]});
+	console.log(view);
 
     // Event handlers
     const openNavbarHandler: () => void = () => {
@@ -31,10 +34,10 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
     }
 
     return (
-        <SNav style={{background: props.navColor}}>
+        <SNav style={{background: props.navColor}} ref={element}>
             <div className="logo">
                 <Link to="/">
-                    <motion.img id="logo-img" src={himo_logo} alt="Himo Studio Logo"/>
+                    <img id="logo-img" src={himo_logo} alt="Himo Studio Logo"/>
                     <h1 id="logo-text">HIMO STUDIO_</h1>
                 </Link>
             </div>
@@ -66,24 +69,23 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
                 <span className="burger1"></span>
                 <span className="burger2"></span>
                 <span className="burger3"></span>
-            </div>
-            
-
-            
+            </div>    
         </SNav>
+            
     );
 }
 
 
 export const SNav = styled.div`
     display: flex;
-    padding: 2rem 10rem;
+    padding: 1rem 10rem;
     min-height: 10vh;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
+    z-index: 10;
 
     ul {
         display: flex;
@@ -102,6 +104,16 @@ export const SNav = styled.div`
 
     .logo {
         flex-basis: 1;
+
+        a {
+            display: flex;
+
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+                margin-right: 1rem;
+            }
+        }
     }
 
     .nav-links-wrapper {
@@ -128,7 +140,7 @@ export const SNav = styled.div`
         
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
         padding: 2rem 2rem;
         .nav-links-wrapper {
             flex-direction: column;
@@ -144,6 +156,10 @@ export const SNav = styled.div`
             top: 0px;
         }
 
+        .nav-link {
+            margin-bottom: 5rem;
+        }
+
         p {
             color: #1b1b1b
         }
@@ -154,10 +170,6 @@ export const SNav = styled.div`
             top: 2rem;
             right: 2rem;
             z-index: 3
-        }
-
-        #logo-img {
-            display: none;
         }
         ul {
             flex-direction: column;

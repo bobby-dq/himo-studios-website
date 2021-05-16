@@ -10,9 +10,12 @@ import { Hero } from '../components/Hero'
 
 export const HomePage: FunctionComponent = () => {
     return (
-        <div>
+        <SHomePage>
             <Hero />
-            <h1 style={{minHeight:'90vh'}}>Home Page</h1>]
-        </div>
+        </SHomePage>
     );
 }
+
+const SHomePage = styled.div`
+    color: white;
+`;

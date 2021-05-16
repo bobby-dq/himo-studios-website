@@ -18,7 +18,7 @@ import { Navbar } from './components/Navbar'
 
 function App() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
-
+	
 	let backgroundColor;
 	const location = useLocation();
 	location.pathname === "/services" || location.pathname==="/contact" ? backgroundColor ="#EAE8DC" : backgroundColor = "#1B1B1B";
@@ -27,7 +27,8 @@ function App() {
 		<div className="App" style={{background: backgroundColor}}>
 			<GlobalStyle />
 			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={backgroundColor}/>
-			<AnimatePresence exitBeforeEnter>
+			<div>
+				<AnimatePresence exitBeforeEnter >
 				<Switch location={location} key={location.pathname}>
 					<Route  exact path="/" component={HomePage} />
 					<Route exact path="/services" component={ServicesPage} />
@@ -35,7 +36,9 @@ function App() {
 					<Route exact path="/faq" component={FaqPage} />
 					<Route exact path="/contact" component={ContactPage} />
 				</Switch>
-			</AnimatePresence>
+				</AnimatePresence>	
+			</div>
+			
 		</div>
     );
 }
