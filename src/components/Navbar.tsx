@@ -78,18 +78,18 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
 
 export const SNav = styled.div`
     display: flex;
-    padding: 1rem 10rem;
+    padding: 2rem 10rem 1rem 10rem;
     min-height: 10vh;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: sticky;
     top: 0;
+    position: sticky;
     z-index: 10;
 
     ul {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
     }
 
@@ -100,6 +100,7 @@ export const SNav = styled.div`
         font-weight: bolder;
         letter-spacing: 2.8px;
         color: #D6AB78;
+        padding-top: 1rem;
     }
 
     .logo {
@@ -107,11 +108,11 @@ export const SNav = styled.div`
 
         a {
             display: flex;
+            flex-direction: column;
 
             img {
-                width: 2.4rem;
-                height: 2.4rem;
                 margin-right: 1rem;
+                width: 10rem;
             }
         }
     }
@@ -156,6 +157,11 @@ export const SNav = styled.div`
             top: 0px;
         }
 
+        .nav-links {
+            top: 10rem;
+        }
+
+
         .nav-link {
             margin-bottom: 5rem;
         }
@@ -176,7 +182,7 @@ export const SNav = styled.div`
         }
 
         .open-nav {
-            transform: translate(-100%);
+            transform: translate(-75%);
         }
 
     }

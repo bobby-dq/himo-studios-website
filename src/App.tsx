@@ -15,6 +15,7 @@ import { FaqPage } from './pages/FaqPage';
 
 // Components
 import { Navbar } from './components/Navbar'
+import { relative } from 'path';
 
 function App() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
@@ -26,7 +27,7 @@ function App() {
     return (
 		<div className="App" style={{background: backgroundColor}}>
 			<GlobalStyle />
-			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={backgroundColor}/>
+			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={'transparent'}/>
 			<div>
 				<AnimatePresence exitBeforeEnter >
 				<Switch location={location} key={location.pathname}>
