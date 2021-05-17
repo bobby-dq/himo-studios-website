@@ -362,7 +362,7 @@ const SAbout = styled(motion.div)`
     display: flex;
     flex-direction: column;
     min-height: 90vh;
-    align-items: center;
+    align-items: space-around;
     justify-content: space-between;
     
 `;

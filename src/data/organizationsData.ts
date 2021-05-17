@@ -3,6 +3,7 @@ import khMin from '../img/kh-min.png';
 import moonCake from '../img/mooncake-sweets.png';
 import teamGalo from '../img/team-galo-chicken.png';
 import theGoldDigger from '../img/the-gold-digger.png';
+import nextProject from '../img/next-project.png'
 
 interface IOrganization {
     name: string,
@@ -86,6 +87,17 @@ export const organizationData: () => IOrganization[] = () => {
                 {
                     name: "Social Media Management",
                     link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                }
+            ]
+        },
+        {
+            name: "Your Dream, Your Vision",
+            image: nextProject,
+            backgroundColor: "#1B1B1B",
+            works: [
+                {
+                    name: "Contact Us",
+                    link: "/contact"
                 }
             ]
         },

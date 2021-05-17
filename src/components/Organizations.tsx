@@ -3,7 +3,11 @@ import { FunctionComponent } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
+// Data
+import { organizationData } from '../data/organizationsData'
+
 export const Organizations: FunctionComponent = () => {
+    const data = organizationData();
 
     return (
         <SOrganizations>
@@ -11,6 +15,9 @@ export const Organizations: FunctionComponent = () => {
                 <h1>Organizations we've worked with</h1>
                 <SLine/>
             </SOrgTitle>
+            <SOrgDisplay>
+                {data.map(d => <SOrganization style={{background: d.backgroundColor}}><img src={d.image} alt={d.name}/></SOrganization>)}
+            </SOrgDisplay>
         </SOrganizations>
 
     );
@@ -18,7 +25,31 @@ export const Organizations: FunctionComponent = () => {
 
 const SOrganizations = styled(motion.div)`
     min-height: 90vh;
+    padding: 0rem 10rem;
     
+`;
+
+const SOrgDisplay = styled(motion.div)`
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 1rem;
+`;
+
+const SOrganization = styled(motion.div)`
+    border: 0.5rem solid #E88073;
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 30rem;
+
+    img {
+        width: 30rem;
+        object-position: center;
+        object-fit: fit;
+    }
 `;
 
 const SOrgTitle = styled(motion.div)`
