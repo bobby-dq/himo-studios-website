@@ -37,7 +37,7 @@ const SOrgDisplay = styled(motion.div)`
 `;
 
 const SOrganization = styled(motion.div)`
-    border: 0.5rem solid #E88073;
+    border: 0.5rem solid #43A498;
     background: white;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ const SOrgTitle = styled(motion.div)`
 
 const SLine = styled(motion.div)`
     height: 0.5rem;
-    background: #E88073;
+    background: #43A498;
     width: 40%;
     position: absolute;
     top: 5rem;

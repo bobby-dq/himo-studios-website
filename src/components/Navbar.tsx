@@ -101,6 +101,7 @@ export const SNav = styled.div`
         letter-spacing: 2.8px;
         color: #D6AB78;
         padding-top: 1rem;
+        text-shadow: inset 1px 1px #1b1b1b;
     }
 
     .logo {
@@ -123,7 +124,7 @@ export const SNav = styled.div`
 
     p {
         &:hover {
-            color: #E88073;
+            color: #43A498;
         }
     }
 
@@ -135,7 +136,7 @@ export const SNav = styled.div`
         span {
             display: block;
             padding: 0.25rem 2rem;
-            background: #E88073;
+            background: #43A498;
             margin: 0.5rem 0rem;
         }
         
@@ -204,7 +205,7 @@ const Sli = styled(motion.li)`
 
 const Sline = styled(motion.div)`
     height: 0.5rem;
-    background: #E88073;
+    background: #43A498;
     width: 0.01%;
     position: absolute;
     top: 2.4rem;
