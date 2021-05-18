@@ -16,7 +16,7 @@ export const Organizations: FunctionComponent = () => {
                 <SLine/>
             </SOrgTitle>
             <SOrgDisplay>
-                {data.map(d => <SOrganization style={{background: d.backgroundColor}}><img src={d.image} alt={d.name}/></SOrganization>)}
+                {data.map(d => <SOrganization style={{background: d.backgroundColor}} key={d.name}><img src={d.image} alt={d.name}/></SOrganization>)}
             </SOrgDisplay>
         </SOrganizations>
 

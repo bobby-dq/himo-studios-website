@@ -13,7 +13,6 @@ interface IWork {
 
 export const Work: FunctionComponent<IWork> = (props) => {
     const [hover, setHover] = useState(false);
-    console.log(hover)
     return (
         <SWork style={{background: props.work.backgroundColor}} onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)}>
             <img src={props.work.image} alt={props.work.name}/>
@@ -37,13 +36,13 @@ const SWork = styled(motion.div)`
     align-items: center;
     width: 100%;
     justify-content: center;
-    height: 30rem;
+    height: 50rem;
     overflow: hidden;
     position: relative;
     cursor: pointer;
 
     img {
-        width: 30rem;
+        width: 45rem;
         object-position: center;
         object-fit: fit;
     }

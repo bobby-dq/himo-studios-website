@@ -26,7 +26,6 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
     // Hooks and States
     
 	const [element,  view] = useInView({threshold: [1]});
-	console.log(view);
 
     // Event handlers
     const openNavbarHandler: () => void = () => {

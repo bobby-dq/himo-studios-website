@@ -19,7 +19,7 @@ export const FaqPage: FunctionComponent = () => {
                 <SLine></SLine>
             </SFaqHeader>
             <SQuestionsWrapper>
-                {data.map(q => <Question question={q}></Question>)}
+                {data.map(q => <Question key={q.question} question={q}></Question>)}
             </SQuestionsWrapper>
         </SFaqPage>
     );

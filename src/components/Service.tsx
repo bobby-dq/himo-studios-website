@@ -21,7 +21,7 @@ export const Service: FunctionComponent<IServiceComponent> = (props) => {
                 </div>
                 <p>{props.service.description1}</p>
                 <ul>
-                    {props.service.subServices?.map(s => <li>{s}</li>)}
+                    {props.service.subServices?.map(s => <li key={s}>{s}</li>)}
                 </ul>
                 <p>{props.service.description2}</p>
             </STextWrapper>

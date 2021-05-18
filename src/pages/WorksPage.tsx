@@ -33,8 +33,8 @@ const SWorks = styled(motion.div)`
 const SWorkGrid = styled(motion.div)`
     padding-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 0.5fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
+    grid-gap: 5rem;
 `;
 
 

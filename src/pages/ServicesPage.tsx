@@ -18,7 +18,7 @@ export const ServicesPage: FunctionComponent = () => {
                 <SLine/>
             </SServiceHeader>
             <SServicesWrapper>
-                {data.map(s => <Service service={s}></Service>)}
+                {data.map(s => <Service service={s} key={s.name}></Service>)}
             </SServicesWrapper>
         </SService>
         
