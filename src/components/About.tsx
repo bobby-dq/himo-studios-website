@@ -58,14 +58,14 @@ const SAbout = styled(motion.div)`
     flex-direction: column;
     min-height: 90vh;
     align-items: space-around;
-    justify-content: space-between;
+    justify-content: center;
     
 `;
 
 const SInfo = styled(motion.div)`
     display: flex;
     padding: 5rem 0rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 `;
 

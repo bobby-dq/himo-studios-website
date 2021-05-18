@@ -5,7 +5,7 @@ import teamGalo from '../img/team-galo-chicken.png';
 import theGoldDigger from '../img/the-gold-digger.png';
 import nextProject from '../img/next-project.png'
 
-interface IOrganization {
+export interface IOrganization {
     name: string,
     image: string, 
     backgroundColor: string,

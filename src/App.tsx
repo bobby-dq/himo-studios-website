@@ -15,7 +15,6 @@ import { FaqPage } from './pages/FaqPage';
 
 // Components
 import { Navbar } from './components/Navbar'
-import { relative } from 'path';
 
 function App() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
