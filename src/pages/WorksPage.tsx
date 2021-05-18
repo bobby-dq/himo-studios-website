@@ -10,7 +10,7 @@ import { Work } from '../components/Work'
 import { organizationData } from '../data/organizationsData'
 
 export const WorksPage: FunctionComponent = () => {
-    const data = organizationData(); 
+    const data = organizationData();
     return (
         <SWorks>
             <SOrgTitle>

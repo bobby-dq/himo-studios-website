@@ -3,6 +3,7 @@ import { FunctionComponent, useState } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { IOrganization } from '../data/organizationsData';
+import { Link } from 'react-router-dom';
 
 // Data
 
@@ -18,7 +19,13 @@ export const Work: FunctionComponent<IWork> = (props) => {
             <img src={props.work.image} alt={props.work.name}/>
             <div className={`overlay ${hover ? 'hovered' : ''}`} >
                 <h1>{props.work.name}</h1>
-                <ul>{props.work.works.map(w => <li key={w.name}><a href={w.link} target="_blank" rel="noreferrer">{w.name}</a></li>)}</ul>
+                <ul>{props.work.works.map(w => 
+                    <li key={w.name}>
+                        {w.link !== "/contact" ? 
+                            <a href={w.link} target="_blank" rel="noreferrer">{w.name}</a> 
+                            : <Link to={w.link}>{w.name}</Link> } 
+                    </li>)}
+                </ul>
             </div>
         </SWork>
     );
