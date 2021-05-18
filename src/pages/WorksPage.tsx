@@ -10,8 +10,7 @@ import { Work } from '../components/Work'
 import { organizationData } from '../data/organizationsData'
 
 export const WorksPage: FunctionComponent = () => {
-    const data = organizationData();
-
+    const data = organizationData(); 
     return (
         <SWorks>
             <SOrgTitle>
@@ -27,16 +26,15 @@ export const WorksPage: FunctionComponent = () => {
 }
 
 const SWorks = styled(motion.div)`
-    min-height: 90vh;
     padding: 5rem 10rem;
-    
+    min-height: 90vh;
 `;
 
 const SWorkGrid = styled(motion.div)`
     padding-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
-    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 0.5fr));
+    grid-gap: 2rem;
 `;
 
 
@@ -45,6 +43,7 @@ const SOrgTitle = styled(motion.div)`
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-bottom: 5rem;
 
     h1 {
         font-family: 'Montserrat', sans-serif;

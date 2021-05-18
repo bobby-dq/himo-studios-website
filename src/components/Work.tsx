@@ -30,13 +30,13 @@ const SWork = styled(motion.div)`
     align-items: center;
     width: 100%;
     justify-content: center;
-    height: 50rem;
+    height: 30rem;
     overflow: hidden;
     position: relative;
     cursor: pointer;
 
     img {
-        width: 50rem;
+        width: 30rem;
         object-position: center;
         object-fit: fit;
     }

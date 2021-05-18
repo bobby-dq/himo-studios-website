@@ -46,7 +46,7 @@ const SOrganization = styled(motion.div)`
     height: 30rem;
 
     img {
-        width: 30rem;
+        width: 28rem;
         object-position: center;
         object-fit: fit;
     }

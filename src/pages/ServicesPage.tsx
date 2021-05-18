@@ -20,7 +20,6 @@ export const ServicesPage: FunctionComponent = () => {
             <SServicesWrapper>
                 {data.map(s => <Service service={s}></Service>)}
             </SServicesWrapper>
-            
         </SService>
         
     );

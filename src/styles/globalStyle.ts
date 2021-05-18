@@ -30,3 +30,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     font-family: 'Playfair Display', serif;
 */
+
+/* Typical breakpoints are exactly 992px and 600px*/

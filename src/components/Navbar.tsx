@@ -83,8 +83,6 @@ export const SNav = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 0;
-    position: sticky;
     z-index: 10;
 
     ul {
