@@ -26,9 +26,9 @@ function App() {
 	
     return (
 		<div style={{background: backgroundColor}}>
+			<GlobalStyle />
+			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={'transparent'}/>
 			<SApp className="App" style={{background: backgroundColor}}>
-				<GlobalStyle />
-				<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={'transparent'}/>
 				<AnimatePresence exitBeforeEnter >
 					<Switch location={location} key={location.pathname}>
 						<Route  exact path="/" component={HomePage} />
