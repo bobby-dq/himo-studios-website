@@ -47,6 +47,9 @@ const SServiceHeader = styled(motion.div)`
         font-size: 3.6rem;
         letter-spacing: 10px;
         font-weight: bolder;
+        @media (max-width: 377px) {
+            text-align: center;    
+        }
     }
 `;
 
@@ -56,11 +59,20 @@ const SLine = styled(motion.div)`
     width: 40%;
     position: absolute;
     top: 5rem;
+
+    @media (max-width: 850px) {
+        width: 75%    
+    }
+
+    @media (max-width: 377px) {
+        top: 10rem;    
+    }
 `;
 
 const SServicesWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; wid
+    }
 `;

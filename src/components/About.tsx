@@ -143,7 +143,7 @@ const SInfoImg = styled(motion.div)`
 const SLine = styled(motion.div)`
     height: 0.5rem;
     background: #43A498;
-    width: 35%;
+    width: 50%;
     position: absolute;
     top: 5rem;
 `;

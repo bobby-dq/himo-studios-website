@@ -65,12 +65,21 @@ const SOrgTitle = styled(motion.div)`
         letter-spacing: 1px;
         font-weight: bold;
     }
+
+    @media(max-width: 500px) {
+        text-align: center;
+    }
 `;
 
 const SLine = styled(motion.div)`
     height: 0.5rem;
     background: #43A498;
-    width: 40%;
+    width: 75%;
     position: absolute;
     top: 5rem;
+
+    @media(max-width: 500px) {
+        top: 10rem;
+        width: 75%;
+    }
 `;

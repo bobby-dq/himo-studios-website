@@ -34,13 +34,21 @@ const SService = styled.div`
     display: flex;
     padding: 5rem 0rem;
     justify-content: space-between;
-
+    @media(max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+    }
     
 `;
 
 const SImageWrapper = styled.div`
     img {
         width: 50rem;
+
+        @media(max-width: 850px) {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
     }
 `;
 
@@ -68,12 +76,17 @@ const STextWrapper = styled.div`
         font-weight: bold;
         letter-spacing: 1px;
     }
+
+    @media(max-width: 850px) {
+        margin-left: 0rem;
+    }
 `
 
 const SLine = styled(motion.div)`
     height: 0.5rem;
     background: #43A498;
-    width: 75%;
+    width: 45%;
     position: absolute;
     top: 3.25rem;
+
 `;
