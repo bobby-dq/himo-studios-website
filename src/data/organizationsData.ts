@@ -87,7 +87,11 @@ export const organizationData: () => IOrganization[] = () => {
                 {
                     name: "Social Media Management",
                     link: "https://www.instagram.com/p/CLVR3yeDeNA/"
-                }
+                },
+                {
+                    name: "Video",
+                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                },
             ]
         },
         {

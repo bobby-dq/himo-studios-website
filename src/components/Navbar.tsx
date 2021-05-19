@@ -153,6 +153,7 @@ export const SNav = styled.div`
             padding-top: 10%;
             transition: transform 0.5s ease-in-out;
             top: 0px;
+            z-index: 10;
         }
 
         .nav-links {
@@ -173,7 +174,7 @@ export const SNav = styled.div`
             position: fixed;
             top: 2rem;
             right: 2rem;
-            z-index: 3
+            z-index: 10
         }
         ul {
             flex-direction: column;

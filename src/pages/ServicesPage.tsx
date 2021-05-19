@@ -28,6 +28,10 @@ export const ServicesPage: FunctionComponent = () => {
 const SService = styled(motion.div)`
     padding: 5rem 10rem;
     min-height: 90vh;
+
+    @media (max-width: 1300px) {
+        padding: 5rem 2rem;
+    }
 `;
 
 const SServiceHeader = styled(motion.div)`

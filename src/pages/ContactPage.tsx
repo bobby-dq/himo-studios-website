@@ -53,6 +53,10 @@ export const ContactPage: FunctionComponent = () => {
 const SContactPage = styled(motion.div)`
     min-height: 90vh;
     padding: 5rem 10rem;
+
+    @media (max-width: 1300px) {
+        padding: 5rem 2rem;
+    }
 `;
 const STitle = styled(motion.div)`
     position: relative;

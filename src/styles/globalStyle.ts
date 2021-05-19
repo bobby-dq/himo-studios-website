@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     html {
         overflow-x: hidden;
         font-size: 62.5%;
+
+        @media (max-width: 992px) {
+            font-size: 50%;
+        }
     }
 
     body {

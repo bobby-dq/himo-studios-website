@@ -24,7 +24,10 @@ export const Hero: FunctionComponent = () => {
                         <h2 className="colored-text">online presence</h2>
                     </div>
                     <div className="main-title-text">
-                        <h2>with expert advice</h2>
+                        <h2>with expert advice.</h2>
+                    </div>
+                    <div className="main-title-text">
+                        <p>From <span className="colored-text">website design</span>, <span className="colored-text">development</span>, <br/><span className="colored-text">to SEO</span>, we got you covered.</p>
                     </div>
                 </motion.div>
                 <Link to="/contact">Get Started</Link>
@@ -41,7 +44,7 @@ export const Hero: FunctionComponent = () => {
 
 const SHero = styled.div`
     min-height: 50vh;
-    padding: 1rem 10rem;
+    padding: 1rem 0rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,11 +57,39 @@ const SHero = styled.div`
             font-family: 'Playfair Display', serif;
             color: #EAE8DA;      
         }
+         p{
+            font-size: 2.4rem;
+            margin-top: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            color: #EAE8DA; 
+            text-decoration: underline;   
+         }
 
         .colored-text {
             color: #43A498;
         }
 
+    }
+
+    @media(max-width: 900px) {
+        align-items: center;
+        justify-content: space-between;
+
+        .hero-img {
+            svg {
+                margin: 2rem;
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width: 737px) {
+        position: relative;
+
+        .hero-img {
+            position: absolute;
+            opacity: 0.04;
+        }
     }
 
    
@@ -91,6 +122,7 @@ const SHero = styled.div`
 const SWave = styled.svg`
     position: absolute;
     left: 0;
+    
 `;
 
 

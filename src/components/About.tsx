@@ -53,12 +53,21 @@ export const About: FunctionComponent = () => {
 }
 
 const SAbout = styled(motion.div)`
-    padding: 10rem 10rem;
+    padding: 10rem 0rem;
     display: flex;
     flex-direction: column;
     min-height: 90vh;
     align-items: space-around;
     justify-content: center;
+
+    @media(max-width: 900px) {
+        .middle-info {
+            flex-direction: column-reverse;
+
+
+        }
+    }
+    
     
 `;
 
@@ -67,6 +76,13 @@ const SInfo = styled(motion.div)`
     padding: 5rem 0rem;
     justify-content: center;
     align-items: center;
+
+    @media(max-width: 900px) {
+        flex-direction: column;
+
+    }
+
+    
 `;
 
 const SInfoText = styled(motion.div)`
@@ -90,6 +106,23 @@ const SInfoText = styled(motion.div)`
         padding-top: 2rem;
     }
 
+    @media (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        .info-text-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        
+    }
+
 `;
 
 const SInfoImg = styled(motion.div)`
@@ -98,6 +131,12 @@ const SInfoImg = styled(motion.div)`
     svg {
         object-fit: cover;
 
+    }
+
+    @media(max-width: 900px) {
+        svg {
+            width: 100%;
+        }
     }
 `;
 

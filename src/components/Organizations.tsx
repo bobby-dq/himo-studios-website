@@ -25,7 +25,7 @@ export const Organizations: FunctionComponent = () => {
 
 const SOrganizations = styled(motion.div)`
     min-height: 90vh;
-    padding: 0rem 10rem;
+    padding: 0rem 0rem;
     
 `;
 

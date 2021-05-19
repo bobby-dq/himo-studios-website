@@ -28,6 +28,10 @@ export const FaqPage: FunctionComponent = () => {
 const SFaqPage = styled(motion.div)`
     min-height: 100vh;
     padding: 5rem 10rem;
+
+    @media (max-width: 1300px) {
+        padding: 5rem 2rem;
+    }
 `;
 
 const SFaqHeader = styled(motion.div)`

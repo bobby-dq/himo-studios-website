@@ -16,7 +16,7 @@ export const serviceData: () => IService[] = () => {
             name: "Web Design and Development",
             description1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ducimus alias labore consectetur voluptatem est, voluptatibus itaque iste, laboriosam quam enim laudantium culpa debitis quasi laborum mollitia sequi! Atque a quos debitis explicabo, cupiditate libero alias.",
             description2: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ducimus alias labore consectetur voluptatem est, voluptatibus itaque iste, laboriosam quam enim laudantium culpa debitis quasi laborum mollitia sequi! Atque a quos debitis explicabo, cupiditate libero alias.",
-            subServices: ["Web Design", "Web Development", "Web Applications", "Hosting and Deployment", "Maintenance"],
+            subServices: ["Web Design", "Web Development", "Web Applications", "Landing Pages", "Hosting and Deployment", "Maintenance"],
             image: webDesign
         },
         {
