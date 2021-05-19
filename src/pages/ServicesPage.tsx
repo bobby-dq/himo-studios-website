@@ -48,7 +48,7 @@ const SServiceHeader = styled(motion.div)`
         letter-spacing: 10px;
         font-weight: bolder;
         @media (max-width: 377px) {
-            text-align: center;    
+            text-align: center    
         }
     }
 `;
@@ -73,6 +73,5 @@ const SServicesWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; wid
-    }
+    justify-content: space-between;
 `;

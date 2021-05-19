@@ -45,6 +45,10 @@ const SWork = styled(motion.div)`
         width: 45rem;
         object-position: center;
         object-fit: fit;
+
+        @media(max-width: 430px) {
+            width: 35rem;
+        }
     }
 
     .overlay {

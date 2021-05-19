@@ -39,6 +39,10 @@ const SWorkGrid = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
     grid-gap: 5rem;
+
+    @media(max-width: 430px) {
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    }
 `;
 
 
@@ -55,6 +59,10 @@ const SOrgTitle = styled(motion.div)`
         font-size: 3.6rem;
         letter-spacing: 10px;
         font-weight: bolder;
+
+        @media(max-width: 638px){
+            text-align: center;
+        }
     }
 `;
 
@@ -64,4 +72,11 @@ const SLine = styled(motion.div)`
     width: 80%;
     position: absolute;
     top: 5rem;
+
+    @media(max-width: 638px){
+            top: 10rem;
+    }
+    @media(max-width:347px){
+            top: 15rem;
+    }
 `;
