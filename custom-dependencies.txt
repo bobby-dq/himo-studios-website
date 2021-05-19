@@ -3,3 +3,4 @@ npm install --save-dev react-router-dom @types/react-router-dom
 npm install --save-dev framer-motion 
 npm install --save-dev react-intersection-observer 
 npm install --save-dev styled-components @types/styled-components
+npm install --save-dev emailjs-com
