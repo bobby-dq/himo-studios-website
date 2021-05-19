@@ -5,9 +5,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 
 // Styles, animations, and illustrations
-import { heroWaveAnimation } from '../styles/animations'
+import { heroImageReveal, heroWaveAnimation, heroTitleAnimation, sectionLoadAnimation, glowingButtonAnimation, textSlideInAnimation } from '../styles/animations'
 import PhoneDesktopSVG from '../svgs/hero-desktop-phone.svg';
-import { heroTitleAnimation, sectionLoadAnimation, glowingButtonAnimation, textFadeInAnimation } from '../styles/animations';
 
 export const Hero: FunctionComponent = () => {
 
@@ -15,7 +14,7 @@ export const Hero: FunctionComponent = () => {
         <SHero variants={sectionLoadAnimation} initial="hidden" animate="show">
             <div className="hero-title">
                 <div className="tiny-text">
-                    <motion.p variants={textFadeInAnimation} >UNPARALLELED CRAFTMANSHIP</motion.p>
+                    <motion.p variants={textSlideInAnimation} >UNPARALLELED CRAFTMANSHIP</motion.p>
                 </div>
                 <motion.div className="main-title">
                     <div className="main-title-text">
@@ -28,16 +27,16 @@ export const Hero: FunctionComponent = () => {
                         <motion.h2 variants={heroTitleAnimation}>with expert advice.</motion.h2>
                     </div>
                     <div className="main-title-text">
-                        <p>From <span className="colored-text">website design</span>, <span className="colored-text">development</span>, <br/><span className="colored-text">to SEO</span>, we got you covered.</p>
+                        <p>From <span className="colored-text">website design</span>, <span className="colored-text">development</span>, <br/>to<span className="colored-text"> SEO</span>, we got you covered.</p>
                     </div>
                 </motion.div>
                 <motion.div variants={glowingButtonAnimation} style={{display: 'inline-block'}}>
                     <Link to="/contact">Get Started</Link>
                 </motion.div>
             </div>
-            <div className="hero-img">
+            <motion.div className="hero-img" variants={heroImageReveal}>
                 <img src={PhoneDesktopSVG} alt="hero-svg" />
-            </div>
+            </motion.div>
             <SWave viewBox="0 0 1440 363" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <motion.path variants={heroWaveAnimation} d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331 227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165 49.0556 -4.21721 8.32998 0.487081 5" stroke="#D6AB78" strokeOpacity="0.2" strokeWidth="10"/>
             </SWave>
@@ -97,6 +96,10 @@ const SHero = styled(motion.div)`
             position: absolute;
             opacity: 0.04;
             z-index: 0;
+
+            img {
+                opacity: 0.04;
+            }
         }
     }
 

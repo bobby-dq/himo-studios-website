@@ -57,23 +57,23 @@ export const glowingButtonAnimation = {
 export const sectionLoadAnimation = {
     hidden: {
         opacity: 0,
-        scale: 3
+        scale: 0.1
     },
     show: {
         scale: 1,
         opacity: 1,
         transition: {
-            duration: 1,
+            duration: 0.5,
             ease: "easeOut",
             when: 'beforeChildren',
-            staggerChildren: 0.25
+            staggerChildren: 0.10
         }
     }
 }
 
-export const textFadeInAnimation = {
+export const textSlideInAnimation = {
     hidden: {
-        x: -1000,
+        x: -500,
     },
     show: {
         x: 0,
@@ -83,3 +83,48 @@ export const textFadeInAnimation = {
         }
     }
 }
+
+export const heroImageReveal = {
+    hidden: {
+        opacity: 0,
+        scale: 2,
+    },
+    show: {
+        opacity: 1,
+        scale: 1, 
+        transition:  {
+            duration: 1,
+        }
+    }
+}
+
+export const scrollReveal = {
+    hidden: {
+        opacity: 0,
+        scale: 1.2,
+        transition: {
+            duration: 0.33
+        }
+    },
+    show: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.33,
+            when: 'beforeChildren',
+            staggerChildren: 0.10
+        }
+    }
+}
+
+export const titleLineReveal = {
+    hidden: {
+        width: '0%'
+    },
+    show: {
+        width: '50%',
+        transition: {
+            duration: 0.33
+        }
+    }
+} 

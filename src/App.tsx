@@ -49,5 +49,6 @@ export default App;
 const SApp = styled.div`
 	max-width: 1440px;
 	margin: auto;
+	overflow: hidden;
 `;
 

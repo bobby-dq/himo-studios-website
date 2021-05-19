@@ -1,19 +1,24 @@
 // Packages
 import { FunctionComponent } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimationControls } from 'framer-motion';
 import styled from 'styled-components';
 
 // Data
-import { organizationData } from '../data/organizationsData'
+import { organizationData } from '../data/organizationsData';
+
+// Styles and Animations
+import { scrollReveal, titleLineReveal } from '../styles/animations';
+import { useScroll } from '../styles/useScroll';
 
 export const Organizations: FunctionComponent = () => {
+    const [element, controls] = useScroll(0.1);
     const data = organizationData();
 
     return (
-        <SOrganizations>
+        <SOrganizations ref={element as (node?: Element | null | undefined) => void} animate={controls as AnimationControls} variants={scrollReveal} initial="hidden">
             <SOrgTitle>
                 <h1>Organizations we've worked with</h1>
-                <SLine/>
+                <SLine></SLine>
             </SOrgTitle>
             <SOrgDisplay>
                 {data.map(d => <SOrganization style={{background: d.backgroundColor}} key={d.name}><img src={d.image} alt={d.name}/></SOrganization>)}

@@ -1,18 +1,23 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, AnimationControls } from 'framer-motion';
 
 // Styles, animations, and illustrations
 import { ReactComponent as WhoWeAre} from '../svgs/who-we-are.svg';
 import { ReactComponent as WhatWeOffer} from '../svgs/what-we-offer.svg';
 import { ReactComponent as WhyChooseUs} from '../svgs/why-choose-us.svg';
+import { scrollReveal } from '../styles/animations';
+import { useScroll } from '../styles/useScroll';
 
 export const About: FunctionComponent = () => {
+    const [element, controls] = useScroll(0.33);
+    const [element1, controls1] = useScroll(0.33);
+    const [element2, controls2] = useScroll(0.33);
 
     return (
         <SAbout>
-            <SInfo>
+            <SInfo ref={element as (node?: Element | null | undefined) => void} animate={controls as AnimationControls} variants={scrollReveal} initial="hidden">
                 <SInfoText>
                     <div className="info-text-title">
                         <h1>Who we are</h1>
@@ -23,8 +28,8 @@ export const About: FunctionComponent = () => {
                 <SInfoImg>
                     <WhoWeAre />
                 </SInfoImg>
-            </SInfo>
-            <SInfo className="middle-info">
+            </SInfo >
+            <SInfo ref={element1 as (node?: Element | null | undefined) => void} animate={controls1 as AnimationControls} variants={scrollReveal} initial="hidden" className="middle-info">
                 <SInfoImg>
                     <WhyChooseUs />
                 </SInfoImg>
@@ -36,7 +41,7 @@ export const About: FunctionComponent = () => {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ducimus alias labore consectetur voluptatem est, voluptatibus itaque iste, laboriosam quam enim laudantium culpa debitis quasi laborum mollitia sequi! Atque a quos debitis explicabo, cupiditate libero alias.</p>
                 </SInfoText>
             </SInfo>
-            <SInfo>
+            <SInfo ref={element2 as (node?: Element | null | undefined) => void} animate={controls2 as AnimationControls} variants={scrollReveal} initial="hidden">
                 <SInfoText>
                     <div className="info-text-title">
                         <h1>What we offer</h1>
