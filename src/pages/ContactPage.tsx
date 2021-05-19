@@ -64,6 +64,7 @@ const STitle = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     margin: 0rem 0rem 5rem 0rem;
+    text-align: center;
 
     h1 {
         font-family: 'Montserrat', sans-serif;
@@ -80,6 +81,13 @@ const SLine = styled(motion.div)`
     width: 75%;
     position: absolute;
     top: 5rem;
+
+    @media(max-width: 781px) {
+        top: 10rem;
+    }
+    @media(max-width: 421px) {
+        top: 15rem;
+    }
 `;
 
 const SFormWrapper = styled(motion.div)`
@@ -97,6 +105,11 @@ const SFormWrapper = styled(motion.div)`
         justify-content: space-between;
         padding: 1rem;
         width: 100%;
+
+        @media(max-width: 450px) {
+            flex-direction: column;
+            padding: 0rem 1rem;
+        }
     }
 
     input, textarea{

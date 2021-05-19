@@ -21,7 +21,6 @@ export const Question: FunctionComponent<IQuestion> = (props) => {
                     <img src={downArrow} alt="see-answer" />
                     <h1>{props.question.question}</h1>
                 </STitle>
-                <SLine></SLine>
             </div>
             {toggle? <p>{props.question.answer}</p> : <p></p>}
             
@@ -44,14 +43,6 @@ const SQuestion = styled(motion.div)`
         font-size: 2.4rem;
     }
     
-`;
-
-const SLine = styled(motion.div)`
-    height: 0.5rem;
-    background: #43A498;
-    width: 50%;
-    position: absolute;
-    top: 5rem;
 `;
 
 const STitle = styled(motion.div)`
