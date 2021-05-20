@@ -2,15 +2,21 @@
 import { FunctionComponent } from 'react';
 import { IService } from '../data/servicesData'; 
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, AnimationControls } from 'framer-motion';
+
+// Styles and animation
+import { useScroll } from '../styles/useScroll';
+import { singleServiceLoadReveal } from '../styles/animations';
 
 interface IServiceComponent {
     service: IService
 }
 
 export const Service: FunctionComponent<IServiceComponent> = (props) => {
+    const [element, controls] = useScroll(0.50);
+
     return (
-        <SService>
+        <SService ref={element as (node?: Element | null | undefined) => void} animate={controls as AnimationControls} variants={singleServiceLoadReveal} initial="hidden">
             <SImageWrapper>
                 <img src={props.service.image} alt={props.service.name} />
             </SImageWrapper>
@@ -30,7 +36,7 @@ export const Service: FunctionComponent<IServiceComponent> = (props) => {
 
 }
 
-const SService = styled.div`
+const SService = styled(motion.div)`
     display: flex;
     padding: 5rem 0rem;
     justify-content: space-between;
@@ -38,6 +44,7 @@ const SService = styled.div`
         flex-direction: column;
         align-items: center;
     }
+    overflow: hidden;
     
 `;
 

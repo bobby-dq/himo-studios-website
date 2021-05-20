@@ -1,12 +1,39 @@
-export const logoDisappear = {
+export const pageAnimation = {
     hidden: {
-        opacity: 1,
+        opacity: 0,
+        x: -300,
     },
+
     show: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.33,
+            when: 'beforeChildren',
+            staggerChildren: 0.10
+        }
+    },
+
+    exit: {
+        x: -300,
         opacity: 0,
         transition: {
-            duration: 0.5,
-            ease: 'easeOut',
+            duration: 0.33
+        }
+    }
+}
+
+export const workAnimation = {
+    hidden: {
+        opacity: 0,
+        y: 300,
+    },
+
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.33,
         }
     },
 }
@@ -127,4 +154,91 @@ export const titleLineReveal = {
             duration: 0.33
         }
     }
-} 
+}
+
+export const singleServiceLoadReveal = {
+    hidden: {
+        opacity: 0,
+        scale: 0.75,
+    },
+    show: {
+        opacity:1,
+        scale: 1,
+        transition: {
+            duration: 0.25,
+            ease: "easeOut"
+        }
+    }
+}
+
+export const arrowQAnimation = {
+    hidden: {
+        opacity: 0,
+        y: -100,
+    },
+    show: {
+        opacity:1,
+        y: 0,
+        transition: {
+            duration: 0.25,
+            ease: "easeOut"
+        }
+    }
+}
+
+export const sliderAnim = {
+    hidden: {
+        x: `-130%`,
+        skew: '45deg'
+    },
+
+    show: {
+        x: '100%',
+        skew: '0deg',
+        transition: {
+            ease: 'easeOut',
+            duration: 1,
+        }
+    }
+}
+
+export const sliderContainerAnim = {
+    hidden: {
+        opacity: 1,
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            ease: 'easeOut'
+        }
+    }
+}
+
+export const homeContainerAnim = {
+    hidden: {
+        opacity: 1,
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+            ease: 'easeOut'
+        }
+    }
+}
+
+export const openingAnim = {
+    hidden: {
+        opacity: 1 
+    },
+    show: {
+        opacity: 0,
+        transition: {
+            duration: 1,
+            ease: 'easeOut',
+            staggerChildren: 0.25,
+            when: 'beforeChildren'
+        }
+    },
+}

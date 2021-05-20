@@ -15,7 +15,8 @@ import { ContactPage } from './pages/ContactPage';
 import { FaqPage } from './pages/FaqPage';
 
 // Components
-import { Navbar } from './components/Navbar'
+import { Navbar } from './components/Navbar';
+import { ScrollTop } from './components/ScrollTop';
 
 
 function App() {
@@ -24,11 +25,17 @@ function App() {
 	const location = useLocation();
 	location.pathname === "/services" || location.pathname==="/contact" ? backgroundColor ="#EAE8DC" : backgroundColor = "#1B1B1B";
 	
+	window.onload = function () {
+        setTimeout(function() {
+            window.scrollTo(0,0);
+        } , 1)
+    }
+
     return (
-		<div style={{background: backgroundColor}}>
+		<div style={{background: backgroundColor, transition: 'background 0.5s ease'}}>
 			<GlobalStyle />
 			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={'transparent'}/>
-			<SApp className="App" style={{background: backgroundColor}}>
+			<SApp className="App" style={{background: 'transparent'}}>
 				<AnimatePresence exitBeforeEnter >
 					<Switch location={location} key={location.pathname}>
 						<Route  exact path="/" component={HomePage} />
@@ -38,7 +45,8 @@ function App() {
 						<Route exact path="/contact" component={ContactPage} />
 					</Switch>
 				</AnimatePresence>	
-			</SApp>	
+			</SApp>
+			<ScrollTop />	
 		</div>
 		
     );

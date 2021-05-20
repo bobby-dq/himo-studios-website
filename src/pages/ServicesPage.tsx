@@ -1,21 +1,24 @@
 // Packages
 import { FunctionComponent } from 'react';
-import { Service } from '../components/Service';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, AnimationControls } from 'framer-motion';
 
 // Data
 import { serviceData } from '../data/servicesData';
 
+// Styles and animations
+import { pageAnimation } from '../styles/animations';
+
+// Components
+import { Service } from '../components/Service';
 
 export const ServicesPage: FunctionComponent = () => {
     const data = serviceData();
-
     return (
-        <SService>
+        <SService variants={pageAnimation} initial="hidden" animate="show">
             <SServiceHeader>
                 <h1>OUR SERVICES</h1>
-                <SLine/>
+                <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '40%'}}></SLine>
             </SServiceHeader>
             <SServicesWrapper>
                 {data.map(s => <Service service={s} key={s.name}></Service>)}
@@ -24,6 +27,7 @@ export const ServicesPage: FunctionComponent = () => {
         
     );
 }
+
 
 const SService = styled(motion.div)`
     padding: 5rem 10rem;

@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { organizationData } from '../data/organizationsData';
 
 // Styles and Animations
-import { scrollReveal, titleLineReveal } from '../styles/animations';
+import { scrollReveal, workAnimation } from '../styles/animations';
 import { useScroll } from '../styles/useScroll';
 
 export const Organizations: FunctionComponent = () => {
@@ -21,7 +21,7 @@ export const Organizations: FunctionComponent = () => {
                 <SLine></SLine>
             </SOrgTitle>
             <SOrgDisplay>
-                {data.map(d => <SOrganization style={{background: d.backgroundColor}} key={d.name}><img src={d.image} alt={d.name}/></SOrganization>)}
+                {data.map(d => <SOrganization variants={workAnimation} style={{background: d.backgroundColor}} key={d.name}><img src={d.image} alt={d.name}/></SOrganization>)}
             </SOrgDisplay>
         </SOrganizations>
 

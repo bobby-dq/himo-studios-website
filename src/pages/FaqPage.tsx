@@ -1,7 +1,7 @@
 // Pacakages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, AnimateSharedLayout } from 'framer-motion';
 
 // Components
 import { Question } from '../components/Question';
@@ -9,25 +9,33 @@ import { Question } from '../components/Question';
 // Data
 import { faqData } from '../data/faqData';
 
+// Styles and animations
+import { pageAnimation } from '../styles/animations';
+
 export const FaqPage: FunctionComponent = () => {
     const data = faqData();
 
     return (
-        <SFaqPage>
+        <SFaqPage variants={pageAnimation} initial="hidden" animate="show">
             <SFaqHeader>
                 <h1>FAQ</h1>
-                <SLine></SLine>
+                <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '25%'}}></SLine>
             </SFaqHeader>
-            <SQuestionsWrapper>
-                {data.map(q => <Question key={q.question} question={q}></Question>)}
-            </SQuestionsWrapper>
+            <AnimateSharedLayout>
+                <SQuestionsWrapper>
+                    {data.map(q => <Question key={q.question} question={q}></Question>)}
+                </SQuestionsWrapper>
+            </AnimateSharedLayout>
+            
         </SFaqPage>
     );
 }
 
 const SFaqPage = styled(motion.div)`
+    display: block;
     min-height: 100vh;
     padding: 5rem 10rem;
+    overflow: hidden;
 
     @media (max-width: 1300px) {
         padding: 5rem 2rem;

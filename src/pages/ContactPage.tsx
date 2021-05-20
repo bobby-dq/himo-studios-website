@@ -1,10 +1,15 @@
 // Packages
-import { FunctionComponent, SyntheticEvent } from 'react';
+import { FunctionComponent, SyntheticEvent, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 
+// Styles and animations
+import { pageAnimation } from '../styles/animations';
+
 export const ContactPage: FunctionComponent = () => {
+    const [sent, setSent] = useState(false);
+
     function sendEmail(e: SyntheticEvent) {
         e.preventDefault();
 
@@ -15,14 +20,15 @@ export const ContactPage: FunctionComponent = () => {
                 console.log(error.text);
             });
             (e.target as HTMLFormElement).reset();
+            setSent(true);
     }
     
 
     return (
-        <SContactPage>
+        <SContactPage variants={pageAnimation} initial="hidden" animate="show">
             <STitle>
                 <h1>WE'D LOVE TO HEAR FROM YOU</h1>
-                <SLine></SLine>
+                <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '75%'}}></SLine>
             </STitle>
             <SFormWrapper>
                 <form onSubmit={(e) => sendEmail(e)}>
@@ -41,10 +47,14 @@ export const ContactPage: FunctionComponent = () => {
                         <textarea name="message" rows={20} placeholder="message (company description, FAQ, pricing)" required></textarea> 
                     </div>
                     <div className="row submit-row">
-                        <input type="submit" value="Send your message!" required/>
+                        <input type="submit" value={`${sent? "We'll get back to you as soon as possible!" : "Send your message"}`} required/>
                     </div>
                 </form>
+                <div className="send-another">
+                    {sent? <p onClick={() => setSent(false)}>Click here to send another message!</p>:'' }
+                </div>
             </SFormWrapper>
+            
         </SContactPage>
     );
 }
@@ -73,6 +83,8 @@ const STitle = styled(motion.div)`
         letter-spacing: 10px;
         font-weight: bolder;
     }
+
+    
 `;
 
 const SLine = styled(motion.div)`
@@ -125,6 +137,16 @@ const SFormWrapper = styled(motion.div)`
         }
     }
     
+    .send-another p {
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 2rem;
+        color: #1b1b1b;
+        font-size: 1.6rem;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: underline;
+    }
+
     textarea {
         resize: none;
     }

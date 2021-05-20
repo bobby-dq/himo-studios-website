@@ -75,14 +75,13 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
 }
 
 
-export const SNav = styled.div`
+export const SNav = styled(motion.div)`
     display: flex;
     padding: 2rem 10rem 1rem 10rem;
     min-height: 10vh;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 10;
 
     ul {
         display: flex;

@@ -11,7 +11,7 @@ import PhoneDesktopSVG from '../svgs/hero-desktop-phone.svg';
 export const Hero: FunctionComponent = () => {
 
     return (
-        <SHero variants={sectionLoadAnimation} initial="hidden" animate="show">
+        <SHero variants={sectionLoadAnimation}>
             <div className="hero-title">
                 <div className="tiny-text">
                     <motion.p variants={textSlideInAnimation} >UNPARALLELED CRAFTMANSHIP</motion.p>
@@ -45,10 +45,10 @@ export const Hero: FunctionComponent = () => {
 }
 
 const SHero = styled(motion.div)`
-    min-height: 50vh;
-    padding: 1rem 0rem;
+    min-height: 80vh;
+    padding: 10rem 0rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 
     .main-title {
