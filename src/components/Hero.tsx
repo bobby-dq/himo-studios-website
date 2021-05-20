@@ -45,7 +45,7 @@ export const Hero: FunctionComponent = () => {
 }
 
 const SHero = styled(motion.div)`
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 10rem 0rem;
     display: flex;
     align-items: flex-start;

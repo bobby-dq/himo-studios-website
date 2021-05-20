@@ -15,7 +15,7 @@ import { pageAnimation } from '../styles/animations';
 export const WorksPage: FunctionComponent = () => {
     const data = organizationData();
     return (
-        <SWorks variants={pageAnimation} initial="hidden" animate="show" >
+        <SWorks variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <SOrgTitle>
                 <h1>SEE SOME OF OUR WORK</h1>
                 <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '80%'}}></SLine>

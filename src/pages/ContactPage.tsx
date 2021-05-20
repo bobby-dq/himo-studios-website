@@ -25,7 +25,7 @@ export const ContactPage: FunctionComponent = () => {
     
 
     return (
-        <SContactPage variants={pageAnimation} initial="hidden" animate="show">
+        <SContactPage variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <STitle>
                 <h1>WE'D LOVE TO HEAR FROM YOU</h1>
                 <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '75%'}}></SLine>

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 // Styles and animations
 import { GlobalStyle } from './styles/globalStyle';
@@ -17,6 +18,9 @@ import { FaqPage } from './pages/FaqPage';
 // Components
 import { Navbar } from './components/Navbar';
 import { ScrollTop } from './components/ScrollTop';
+import { Opening } from './components/Opening';
+
+// Styles and animations
 
 
 function App() {
@@ -32,8 +36,9 @@ function App() {
     }
 
     return (
-		<div style={{background: backgroundColor, transition: 'background 0.5s ease'}}>
+		<div style={{background: backgroundColor, transition: 'background 0.5s ease', overflow: 'hidden'}}>
 			<GlobalStyle />
+            <Opening />
 			<Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} navColor={'transparent'}/>
 			<SApp className="App" style={{background: 'transparent'}}>
 				<AnimatePresence exitBeforeEnter >
@@ -59,4 +64,6 @@ const SApp = styled.div`
 	margin: auto;
 	overflow: hidden;
 `;
+
+
 

@@ -120,7 +120,7 @@ export const heroImageReveal = {
         opacity: 1,
         scale: 1, 
         transition:  {
-            duration: 1,
+            duration: 0.5,
         }
     }
 }
@@ -189,7 +189,7 @@ export const arrowQAnimation = {
 export const sliderAnim = {
     hidden: {
         x: `-130%`,
-        skew: '45deg'
+        skew: '30deg'
     },
 
     show: {
@@ -209,36 +209,54 @@ export const sliderContainerAnim = {
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.1,
-            ease: 'easeOut'
+            staggerChildren: 0.2,
+            ease: 'easeOut',
         }
     }
 }
 
-export const homeContainerAnim = {
+export const introTextContainerAnimation = {
     hidden: {
         opacity: 1,
-    },
+        x: 0
+    }, 
     show: {
+        x: 0,
         opacity: 1,
         transition: {
-            staggerChildren: 0.5,
+            duration: 1,
+            when: 'afterChildren',
+            staggerChildren: 0.75,
+            ease: 'easeOut'
+        }
+    },
+}
+
+export const introTextAnimation = {
+    hidden: {
+        y: 100
+    },
+    show: {
+        y: 0,
+        transition: {
+            duration: 0.75,
             ease: 'easeOut'
         }
     }
 }
 
-export const openingAnim = {
+export const openingContainerAnim = {
     hidden: {
-        opacity: 1 
+        opacity: 1,
+        x: '0%'
     },
     show: {
         opacity: 0,
+        x: '100%',
         transition: {
             duration: 1,
             ease: 'easeOut',
-            staggerChildren: 0.25,
-            when: 'beforeChildren'
+            delay: 3.50,
         }
     },
 }

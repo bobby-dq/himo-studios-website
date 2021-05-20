@@ -16,7 +16,7 @@ export const FaqPage: FunctionComponent = () => {
     const data = faqData();
 
     return (
-        <SFaqPage variants={pageAnimation} initial="hidden" animate="show">
+        <SFaqPage variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <SFaqHeader>
                 <h1>FAQ</h1>
                 <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '25%'}}></SLine>
