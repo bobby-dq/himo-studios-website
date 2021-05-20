@@ -256,7 +256,7 @@ export const openingContainerAnim = {
         transition: {
             duration: 1,
             ease: 'easeOut',
-            delay: 3.50,
+            delay: 5.25,
         }
     },
 }

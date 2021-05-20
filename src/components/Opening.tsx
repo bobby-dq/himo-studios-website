@@ -12,10 +12,12 @@ export const Opening: FunctionComponent = () => {
         <SOpening variants={openingContainerAnim} initial="hidden" animate="show">
             <AnimatePresence exitBeforeEnter>
                 <SIntro variants={introTextContainerAnimation}>
-                    <div className="openingText brand"><motion.h1 variants={introTextAnimation}>HIMO</motion.h1></div>
-                    <div className="openingText"><motion.h1 variants={introTextAnimation}>IS A</motion.h1></div>
-                    <div className="openingText colored"><motion.h1 variants={introTextAnimation}>CREATIVE</motion.h1></div>
-                    <div className="openingText colored"><motion.h1 variants={introTextAnimation}>STUDIO</motion.h1></div>
+                    <div className="openingText brand"><motion.h1 variants={introTextAnimation}>himo [hí.mû.]</motion.h1></div>
+                    <div className="openingText colored small"><motion.h1 variants={introTextAnimation}>achieve (v.); become (v.); </motion.h1></div>
+                    <div className="openingText colored small"><motion.h1 variants={introTextAnimation}>make (v.); produce (v.);</motion.h1></div>
+                    <div className="openingText small "><motion.h1 variants={introTextAnimation}>language: Cebuano</motion.h1></div>
+                    <div className="openingText small "><motion.h1 variants={introTextAnimation}>word origin: Central and <br/>South Philippines</motion.h1></div>
+                    <div className="openingText small"><motion.h1 variants={introTextAnimation}></motion.h1></div>
                     <motion.div variants={sliderContainerAnim}>
                         <Frame1 variants={sliderAnim} />
                         <Frame2 variants={sliderAnim} />
@@ -53,6 +55,7 @@ const SIntro = styled(motion.div)`
         font-size: 4.2rem;
         font-family: 'Playfair Display', serif;
         letter-spacing: 5px;
+        text-align: center;
     }
 
     .colored {
@@ -65,6 +68,9 @@ const SIntro = styled(motion.div)`
     .openingText {
         
         overflow-y: hidden;
+    }
+    .small h1{
+        font-size: 2.4rem;
     }
 
 `;
