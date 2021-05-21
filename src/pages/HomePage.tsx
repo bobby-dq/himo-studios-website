@@ -14,7 +14,7 @@ import { pageAnimation } from '../styles/animations'
 
 export const HomePage: FunctionComponent = () => {
     return (
-        <SHomePage variants={pageAnimation} initial="hidden" animate="show">
+        <SHomePage variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <Hero />
             <About />
             <Organizations />

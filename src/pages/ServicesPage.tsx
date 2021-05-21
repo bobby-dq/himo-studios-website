@@ -15,7 +15,7 @@ import { Service } from '../components/Service';
 export const ServicesPage: FunctionComponent = () => {
     const data = serviceData();
     return (
-        <SService variants={pageAnimation} initial="hidden" animate="show">
+        <SService variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <SServiceHeader>
                 <h1>OUR SERVICES</h1>
                 <SLine transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: '40%'}}></SLine>

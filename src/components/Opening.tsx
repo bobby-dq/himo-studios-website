@@ -16,7 +16,7 @@ export const Opening: FunctionComponent = () => {
                     <div className="openingText colored small"><motion.h1 variants={introTextAnimation}>achieve (v.); become (v.); </motion.h1></div>
                     <div className="openingText colored small"><motion.h1 variants={introTextAnimation}>make (v.); produce (v.);</motion.h1></div>
                     <div className="openingText small "><motion.h1 variants={introTextAnimation}>language: Cebuano</motion.h1></div>
-                    <div className="openingText small "><motion.h1 variants={introTextAnimation}>word origin: Central and <br/>South Philippines</motion.h1></div>
+                    <div className="openingText small "><motion.h1 variants={introTextAnimation}>origin: Central and <br/>Southern Philippines</motion.h1></div>
                     <div className="openingText small"><motion.h1 variants={introTextAnimation}></motion.h1></div>
                     <motion.div variants={sliderContainerAnim}>
                         <Frame1 variants={sliderAnim} />
@@ -66,7 +66,6 @@ const SIntro = styled(motion.div)`
         color: #D6AB78
     }
     .openingText {
-        
         overflow-y: hidden;
     }
     .small h1{

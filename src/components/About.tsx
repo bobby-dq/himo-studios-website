@@ -23,7 +23,7 @@ export const About: FunctionComponent = () => {
                         <h1>Who we are</h1>
                         <SLine></SLine>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ducimus alias labore consectetur voluptatem est, voluptatibus itaque iste, laboriosam quam enim laudantium culpa debitis quasi laborum mollitia sequi! Atque a quos debitis explicabo, cupiditate libero alias.</p>
+                    <p>We are an Edmonton and Terrace-based Web Studio with a keen eye on unique, modern, and responsive         design. We specialize in creating and maintaining quality websites, SEO, and social media management. </p>
                 </SInfoText>
                 <SInfoImg>
                     <WhoWeAre />
