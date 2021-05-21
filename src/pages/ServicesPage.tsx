@@ -1,7 +1,7 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { motion, AnimationControls } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 // Data
 import { serviceData } from '../data/servicesData';

@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 // Styles and animations
 import { GlobalStyle } from './styles/globalStyle';

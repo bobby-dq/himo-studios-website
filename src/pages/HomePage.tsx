@@ -1,13 +1,12 @@
 // Packages
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { AnimatePresence, motion } from 'framer-motion';
+import {  motion } from 'framer-motion';
 
 // Components
 import { Hero } from '../components/Hero';
 import { About } from '../components/About';
 import { Organizations } from '../components/Organizations';
-import { Opening } from '../components/Opening';
 
 // Styles and animations
 import { pageAnimation } from '../styles/animations'

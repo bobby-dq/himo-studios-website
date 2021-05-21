@@ -42,6 +42,7 @@ export const SOpening = styled(motion.div) `
     position: fixed;
     top: 0;
     left: 0;
+    padding: 0.5rem;
 `;
 
 const SIntro = styled(motion.div)`

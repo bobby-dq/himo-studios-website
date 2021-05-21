@@ -3,10 +3,7 @@ import { FunctionComponent } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
-// Styles and animations
-import { useScroll } from '../styles/scrollTriggers';
 
 // Photos and Logos
 import himo_logo from '../img/himo_logo.png';
@@ -24,8 +21,6 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
     // console.log(props.showLogo);
 
     // Hooks and States
-    
-	const [element,  view] = useInView({threshold: [1]});
 
     // Event handlers
     const openNavbarHandler: () => void = () => {
@@ -33,7 +28,7 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
     }
 
     return (
-        <SNav style={{background: props.navColor}} ref={element}>
+        <SNav style={{background: props.navColor}}>
             <div className="logo">
                 <Link to="/">
                     <img id="logo-img" src={himo_logo} alt="Himo Studio Logo"/>
@@ -140,11 +135,10 @@ export const SNav = styled(motion.div)`
         transition: all 0.33s ease;
         border-radius: 5px;
         &:hover {
-            box-shadow: 5px 5px 50px 10px #43A498;
+            
             color: #3c3b3b;
         }
         padding: 0 1rem;
-        box-shadow: 5px 5px 100px 10px #43A498;
     }
 
     @media (max-width: 1300px) {
