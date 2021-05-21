@@ -5,6 +5,28 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        scrollbar-width: thick;
+        scrollbar-color: #43A498 transparent;
+        scroll-behavior: smooth;
+    }
+
+    *::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #EAE8DA;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #43A498;
+        border: transparent;
+        cursor: pointer;
+    }
+
+    *::-moz-scrollbar-thumb {
+        background-color: #43A498;
+        border: transparent;
     }
 
     html {
@@ -18,6 +40,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         overflow-x: hidden;
+        
     }
 
     a, li {

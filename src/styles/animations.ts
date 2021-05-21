@@ -262,3 +262,30 @@ export const openingContainerAnim = {
         }
     },
 }
+
+export const inProgressWrapper = {
+    hidden: {
+        opacity: 1,
+    },
+    show: {
+        opacity:1,
+        transition: {
+            staggerChildren: 0.33,
+            delay: 5.5,
+            when: 'beforeChildren'
+        }
+    }
+}
+
+export const progressTextAnimation = {
+    hidden: {
+        y: '8rem'
+    },
+    show: {
+        y: 0,
+        transition: {
+            duration: 0.75,
+            ease: "easeOut",
+        }
+    }
+}

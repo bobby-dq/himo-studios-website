@@ -13,12 +13,14 @@ import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { WorksPage } from './pages/WorksPage';
 import { ContactPage } from './pages/ContactPage';
-import { FaqPage } from './pages/FaqPage';
+// import { FaqPage } from './pages/FaqPage';
 
 // Components
 import { Navbar } from './components/Navbar';
 import { ScrollTop } from './components/ScrollTop';
 import { Opening } from './components/Opening';
+import { Footer } from './components/Footer';
+import { InProgress } from './components/InProgress';
 
 // Styles and animations
 
@@ -48,9 +50,11 @@ function App() {
 						<Route exact path="/works" component={WorksPage} />
 						{/* <Route exact path="/faq" component={FaqPage} /> */}
 						<Route exact path="/contact" component={ContactPage} />
+						<Route exact path="/inprogress" component={InProgress} />
 					</Switch>
-				</AnimatePresence>	
+				</AnimatePresence>
 			</SApp>
+			<Footer></Footer>
 			<ScrollTop />	
 		</div>
 		

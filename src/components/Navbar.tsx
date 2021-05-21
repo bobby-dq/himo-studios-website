@@ -138,6 +138,7 @@ export const SNav = styled(motion.div)`
         background: #73FFEE;
         color: black;
         transition: all 0.33s ease;
+        border-radius: 5px;
         &:hover {
             box-shadow: 5px 5px 50px 10px #43A498;
             color: #3c3b3b;

@@ -26,11 +26,11 @@ export const organizationData: () => IOrganization[] = () => {
             works: [
                 {
                     name: "Video",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    link: "https://www.youtube.com/watch?v=LYsD2dbQPrA"
                 },
                 {
                     name: "Website",
-                    link: "https://www.instagram.com/mooncakesweetsntreats/"
+                    link: "/inprogress"
                 }
             ]
         },
@@ -41,11 +41,11 @@ export const organizationData: () => IOrganization[] = () => {
             works: [
                 {
                     name: "Website",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    link: "/inprogress"
                 },
                 {
                     name: "Video",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    link: "https://fb.watch/5DPAff_P0e/"
                 }
             ]
         },
@@ -55,12 +55,8 @@ export const organizationData: () => IOrganization[] = () => {
             backgroundColor: "#EAE8DC",
             works: [
                 {
-                    name: "Website",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
-                },
-                {
                     name: "Video",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    link: "https://fb.watch/5DPAff_P0e/"
                 }
             ]
         }, 
@@ -71,7 +67,7 @@ export const organizationData: () => IOrganization[] = () => {
             works: [
                 {
                     name: "Website",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    link: "/inprogress"
                 }
             ]
         },
@@ -81,16 +77,12 @@ export const organizationData: () => IOrganization[] = () => {
             backgroundColor: "#1B1B1B",
             works: [
                 {
-                    name: "SEO",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
-                },
-                {
-                    name: "Social Media Management",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    name: "SEO Social Media Management",
+                    link: "https://www.facebook.com/Juvys-Gold-Jewellery-Shop-LTD-108779297481653"
                 },
                 {
                     name: "Video",
-                    link: "https://www.instagram.com/p/CLVR3yeDeNA/"
+                    link: "/inprogress"
                 },
             ]
         },
