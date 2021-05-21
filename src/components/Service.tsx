@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react';
 import { IService } from '../data/servicesData'; 
 import styled from 'styled-components';
 import { motion, AnimationControls } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Styles and animation
 import { useScroll } from '../styles/useScroll';
@@ -29,7 +30,9 @@ export const Service: FunctionComponent<IServiceComponent> = (props) => {
                 <ul>
                     {props.service.subServices?.map(s => <li key={s}>{s}</li>)}
                 </ul>
-                <p>{props.service.description2}</p>
+                <div className="contact-link">
+                    <Link to="/contact">{props.service.description2}</Link>
+                </div>
             </STextWrapper>
         </SService>
     );
@@ -63,7 +66,25 @@ const STextWrapper = styled.div`
     margin-left: 5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: 2rem; 
+
+    .contact-link {
+        padding: 0.5rem 1rem;
+        background: #43A498;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 2px;
+        a {
+            color: white;
+            transition: all ease 0.33s;
+
+            &:hover {
+                box-shadow: 5px 5px 50px 10px rgba(67, 164, 153, 0.50);
+                color: white;
+            }
+        }
+    }
+
     .title {
         position: relative;
         margin-bottom: 2rem;

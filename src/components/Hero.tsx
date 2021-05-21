@@ -31,7 +31,7 @@ export const Hero: FunctionComponent = () => {
                     </div>
                 </motion.div>
                 <motion.div variants={glowingButtonAnimation} style={{display: 'inline-block'}}>
-                    <Link to="/contact">Get Started</Link>
+                    <Link to="/contact">Work With Us!</Link>
                 </motion.div>
             </div>
             <motion.div className="hero-img" variants={heroImageReveal}>
@@ -115,6 +115,11 @@ const SHero = styled(motion.div)`
             padding: 0.5rem 3rem;
             font-family: 'Playfair Display', serif;
             background: #73FFEE;
+            transition: all ease 0.33s;
+            &:hover {
+                box-shadow: 5px 5px 50px 10px #43A498;
+                color: #3c3b3b;
+            }
             /* box-shadow: 5px 5px 100px 10px #43A498, inset 1px 1px 10px 0.5px rgba(0, 0, 0, 0.5); */
         }
     }

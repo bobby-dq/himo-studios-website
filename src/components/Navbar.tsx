@@ -54,12 +54,8 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
                         <Link style={{color: textColor}} to="/works"><p>3. WORK</p></Link>
                         <Sline transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: location === '/works'?'75%' :'0%'}}></Sline>
                     </Sli>
-                    <Sli className="nav-link">
-                        <Link style={{color: textColor}} to="/faq"><p>4. FAQ</p></Link>
-                        <Sline transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: location === '/faq'?'75%' :'0%'}}></Sline>
-                    </Sli>
-                    <Sli className="nav-link">
-                        <Link style={{color: textColor}} to="/contact"><p>5. CONTACT</p></Link>
+                    <Sli className="nav-link ">
+                        <Link style={{color: textColor}} to="/contact"><p className="contact">4. CONTACT US!</p></Link>
                         <Sline transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: location === '/contact'?'75%' :'0%'}}></Sline>
                     </Sli>
                 </ul>
@@ -138,6 +134,18 @@ export const SNav = styled(motion.div)`
         
     }
 
+    .contact {
+        background: #73FFEE;
+        color: black;
+        transition: all 0.33s ease;
+        &:hover {
+            box-shadow: 5px 5px 50px 10px #43A498;
+            color: #3c3b3b;
+        }
+        padding: 0 1rem;
+        box-shadow: 5px 5px 100px 10px #43A498;
+    }
+
     @media (max-width: 1300px) {
         padding: 2rem 2rem;
         .nav-links-wrapper {
@@ -162,7 +170,11 @@ export const SNav = styled(motion.div)`
 
         .nav-link {
             margin-bottom: 5rem;
+
+
         }
+
+        
 
         p {
             color: #1b1b1b

@@ -23,7 +23,7 @@ export const About: FunctionComponent = () => {
                         <h1>Who we are</h1>
                         <SLine></SLine>
                     </div>
-                    <p>We are an Edmonton and Terrace-based Web Studio with a keen eye on unique, modern, and responsive         design. We specialize in creating and maintaining quality websites, SEO, and social media management. </p>
+                    <p>We are an Edmonton-based Web Studio with a keen eye on unique, responsive, and modern design. Our studio consists of a web developer and an SEO specialist - both with a background in photography and videography.</p>
                 </SInfoText>
                 <SInfoImg>
                     <WhoWeAre />
@@ -38,7 +38,7 @@ export const About: FunctionComponent = () => {
                         <h1>Why choose us</h1>
                         <SLine></SLine>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ducimus alias labore consectetur voluptatem est, voluptatibus itaque iste, laboriosam quam enim laudantium culpa debitis quasi laborum mollitia sequi! Atque a quos debitis explicabo, cupiditate libero alias.</p>
+                    <p>We love what we do - and it shows! We use modern online strategies to ensure that you have the best online exposure and the most up-to-date technologies to make your ideas come true. We strive to craft stunning designs, push the boundaries of technologies to deliver the best possible service.</p>
                 </SInfoText>
             </SInfo>
             <SInfo ref={element2 as (node?: Element | null | undefined) => void} animate={controls2 as AnimationControls} variants={scrollReveal} initial="hidden">
@@ -47,7 +47,7 @@ export const About: FunctionComponent = () => {
                         <h1>What we offer</h1>
                         <SLine></SLine>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ducimus alias labore consectetur voluptatem est, voluptatibus itaque iste, laboriosam quam enim laudantium culpa debitis quasi laborum mollitia sequi! Atque a quos debitis explicabo, cupiditate libero alias.</p>
+                    <p>We offer services that will expand your brand and online presence,  specializing in designing and maintaining custom websites, search engine optimization, and social media management. We also offer photography and videography services!</p>
                 </SInfoText>
                 <SInfoImg>
                     <WhatWeOffer/>                

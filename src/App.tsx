@@ -46,7 +46,7 @@ function App() {
 						<Route  exact path="/" component={HomePage} />
 						<Route exact path="/services" component={ServicesPage} />
 						<Route exact path="/works" component={WorksPage} />
-						<Route exact path="/faq" component={FaqPage} />
+						{/* <Route exact path="/faq" component={FaqPage} /> */}
 						<Route exact path="/contact" component={ContactPage} />
 					</Switch>
 				</AnimatePresence>	
