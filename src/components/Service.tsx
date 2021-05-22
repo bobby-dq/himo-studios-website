@@ -14,7 +14,7 @@ interface IServiceComponent {
 }
 
 export const Service: FunctionComponent<IServiceComponent> = (props) => {
-    const [element, controls] = useScroll(0.50);
+    const [element, controls] = useScroll(0.10);
 
     return (
         <SService ref={element as (node?: Element | null | undefined) => void} animate={controls as AnimationControls} variants={singleServiceLoadReveal} initial="hidden">

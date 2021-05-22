@@ -92,7 +92,6 @@ export const SNav = styled(motion.div)`
     }
 
     .logo {
-        flex-basis: 1;
 
         a {
             display: flex;
@@ -105,9 +104,7 @@ export const SNav = styled(motion.div)`
         }
     }
 
-    .nav-links-wrapper {
-        flex-basis: 2;
-    }
+
 
     p {
         &:hover {
@@ -143,6 +140,7 @@ export const SNav = styled(motion.div)`
 
     @media (max-width: 1300px) {
         padding: 2rem 2rem;
+
         .nav-links-wrapper {
             flex-direction: column;
             position: fixed;
@@ -160,12 +158,12 @@ export const SNav = styled(motion.div)`
 
         .nav-links {
             top: 10rem;
+            width: 100%;
         }
 
 
         .nav-link {
             margin-bottom: 5rem;
-
 
         }
 
@@ -182,14 +180,30 @@ export const SNav = styled(motion.div)`
             right: 2rem;
             z-index: 10
         }
+
         ul {
             flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
         .open-nav {
-            transform: translate(-75%);
+            transform: translate(-25%);
+
         }
 
+    }
+
+    @media (max-width: 900px) { 
+        .open-nav {
+            transform: translate(-50%);
+        }
+    }
+
+    @media (max-width: 600px) { 
+        .open-nav {
+            transform: translate(-75%);
+        }
     }
 
 `;
