@@ -56,7 +56,7 @@ export const heroWaveAnimation = {
 
 export const heroTitleAnimation = {
     hidden: {
-        y: '4rem'
+        y: '5rem'
     },
     show: {
         y: 0,
@@ -220,10 +220,12 @@ export const sliderContainerAnim = {
 export const introTextContainerAnimation = {
     hidden: {
         opacity: 1,
-        x: 0
+        x: 0,
+        
     }, 
     show: {
         x: 0,
+        
         opacity: 1,
         transition: {
             duration: 1,
@@ -236,10 +238,12 @@ export const introTextContainerAnimation = {
 
 export const introTextAnimation = {
     hidden: {
-        y: 100
+        y: 100,
+        
     },
     show: {
         y: 0,
+        
         transition: {
             duration: 0.75,
             ease: 'easeOut'
@@ -250,15 +254,17 @@ export const introTextAnimation = {
 export const openingContainerAnim = {
     hidden: {
         opacity: 1,
-        x: '0%'
+        x: '0%',
+        skew: '0deg'
     },
     show: {
         opacity: 0,
         x: '100%',
+        skew:'90deg',
         transition: {
             duration: 1,
             ease: 'easeOut',
-            delay: 5.25,
+            delay: 5,
         }
     },
 }
