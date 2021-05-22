@@ -271,7 +271,7 @@ export const inProgressWrapper = {
         opacity:1,
         transition: {
             staggerChildren: 0.33,
-            delay: 5.5,
+            delay: 0.33,
             when: 'beforeChildren'
         }
     }

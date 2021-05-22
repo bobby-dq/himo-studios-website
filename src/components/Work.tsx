@@ -21,9 +21,9 @@ export const Work: FunctionComponent<IWork> = (props) => {
                 <h1>{props.work.name}</h1>
                 <ul>{props.work.works.map(w => 
                     <li key={w.name}>
-                        {w.link !== "/contact" ? 
-                            <a href={w.link} target="_blank" rel="noreferrer">{w.name}</a> 
-                            : <Link to={w.link}>{w.name}</Link> } 
+                        {w.link === "/contact" ? <Link to={w.link}>{w.name}</Link>
+                        : w.link === "/inprogress" ? <Link to={w.link}>{w.name}</Link>
+                        : <a href={w.link} target="_blank" rel="noreferrer">{w.name}</a> }
                     </li>)}
                 </ul>
             </div>
