@@ -260,7 +260,7 @@ export const openingContainerAnim = {
     show: {
         opacity: 0,
         x: '100%',
-        skew:'90deg',
+        skew:'-30deg',
         transition: {
             duration: 1,
             ease: 'easeOut',
