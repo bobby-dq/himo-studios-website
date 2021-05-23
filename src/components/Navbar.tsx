@@ -32,7 +32,7 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
             <div className="logo">
                 <Link to="/">
                     <img id="logo-img" src={himo_logo} alt="Himo Studio Logo"/>
-                    <h1 id="logo-text">HIMO STUDIO_</h1>
+                    <h1 id="logo-text">HIMO STUDIOS_</h1>
                 </Link>
             </div>
             <div className={`nav-links-wrapper ${props.navbarOpen ? 'open-nav' : ''}`}>
