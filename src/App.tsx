@@ -20,6 +20,7 @@ import { ScrollTop } from './components/ScrollTop';
 import { Opening } from './components/Opening';
 import { Footer } from './components/Footer';
 import { InProgress } from './components/InProgress';
+import { NotFound } from './components/NotFound';
 
 // Styles and animations
 
@@ -44,12 +45,13 @@ function App() {
 			<SApp className="App" style={{background: 'transparent'}}>
 				<AnimatePresence exitBeforeEnter >
 					<Switch location={location} key={location.pathname}>
-						<Route  exact path="/" component={HomePage} />
+						<Route exact path="/" component={HomePage} />
 						<Route exact path="/services" component={ServicesPage} />
 						<Route exact path="/works" component={WorksPage} />
 						{/* <Route exact path="/faq" component={FaqPage} /> */}
 						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/inprogress" component={InProgress} />
+						<Route component={NotFound} />
 					</Switch>
 				</AnimatePresence>
 			</SApp>
