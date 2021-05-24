@@ -11,7 +11,7 @@ export const NotFound: FunctionComponent = () => {
     return  (
         <SNotFound>
             <div className="text-wrapper">
-                <h1>Oops, seems like we can't find what youre looking for..</h1>
+                <h1>Oops, seems like we can't find what you're looking for..</h1>
                 <Link to="/">Back to Home</Link>
             </div>
             <div className="image-wrapper">
