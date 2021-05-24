@@ -16,7 +16,7 @@ export const serviceData: () => IService[] = () => {
             name: "Web Design",
             description1: "We will provide you a responsive website. All our websites are designed and optimized to seamlessly perform on all devices - from your desktop to your tablet to your mobile phone. Here's a list of services we offer that's related to web design: ",
             description2: "Ready to build your website? Give us a shout!",
-            subServices: ["Web Design and Maintenance", "Functinal Applications", "Landing Pages", "Hosting and Deployment", "Maintenance"],
+            subServices: ["Web Design and Maintenance", "Functional Applications", "Landing Pages", "Hosting and Deployment", "Maintenance"],
             image: webDesign
         },
         {
