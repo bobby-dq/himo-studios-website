@@ -24,7 +24,7 @@ export const Footer: FunctionComponent = () => {
                     <img src={emailIcon} alt="email" />
                 </div>
                 <div className="text-wrapper">
-                    <a href = "mailto: josh.quilacio@gmail.com">josh.quilacio@gmail.com</a>
+                    <a href = "mailto: himowebstudio@gmail.com">himowebstudio@gmail.com</a>
                 </div>
                 
             </div>
