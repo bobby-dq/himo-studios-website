@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 // Styles and animation
 import { useScroll } from '../styles/useScroll';
-import { singleServiceLoadReveal } from '../styles/animations';
+import { singleServiceLoadReveal, serviceImageReveal } from '../styles/animations';
 
 interface IServiceComponent {
     service: IService
@@ -19,7 +19,7 @@ export const Service: FunctionComponent<IServiceComponent> = (props) => {
     return (
         <SService ref={element as (node?: Element | null | undefined) => void} animate={controls as AnimationControls} variants={singleServiceLoadReveal} initial="hidden">
             <SImageWrapper>
-                <img src={props.service.image} alt={props.service.name} />
+                <motion.img variants={serviceImageReveal} src={props.service.image} alt={props.service.name} />
             </SImageWrapper>
             <STextWrapper>
                 <div className="title">

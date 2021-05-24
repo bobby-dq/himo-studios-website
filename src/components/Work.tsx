@@ -6,7 +6,7 @@ import { IOrganization } from '../data/organizationsData';
 import { Link } from 'react-router-dom';
 
 // Styles and animation
-import { workAnimation } from '../styles/animations'
+import { workAnimation, serviceImageReveal } from '../styles/animations'
 
 interface IWork {
     work: IOrganization
@@ -16,7 +16,7 @@ export const Work: FunctionComponent<IWork> = (props) => {
     const [hover, setHover] = useState(false);
     return (
         <SWork variants={workAnimation} style={{background: props.work.backgroundColor}} onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)} >
-            <img src={props.work.image} alt={props.work.name}/>
+            <motion.img variants={serviceImageReveal} src={props.work.image} alt={props.work.name}/>
             <div className={`overlay ${hover ? 'hovered' : ''}`} >
                 <h1>{props.work.name}</h1>
                 <ul>{props.work.works.map(w => 
