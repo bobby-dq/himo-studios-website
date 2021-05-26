@@ -29,8 +29,8 @@ export const organizationData: () => IOrganization[] = () => {
                     link: "https://www.youtube.com/watch?v=LYsD2dbQPrA"
                 },
                 {
-                    name: "Website",
-                    link: "/inprogress"
+                    name: "Website (Prototype Stage)",
+                    link: "http://moon-cake.s3-website.ca-central-1.amazonaws.com/"
                 }
             ]
         },
@@ -66,8 +66,8 @@ export const organizationData: () => IOrganization[] = () => {
             backgroundColor: "#1B1B1B",
             works: [
                 {
-                    name: "Website",
-                    link: "/inprogress"
+                    name: "Website (Prototype Stage)",
+                    link: "http://bonterra-built.s3-website.ca-central-1.amazonaws.com/"
                 }
             ]
         },
