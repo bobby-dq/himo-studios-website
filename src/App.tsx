@@ -31,8 +31,7 @@ function App() {
 	let backgroundColor;
 	const location = useLocation();
 	location.pathname === "/services" || 
-		location.pathname ==="/contact" || 
-		location.pathname.includes("/blog") ? backgroundColor ="#EAE8DC" : 
+		location.pathname ==="/contact" ? backgroundColor ="#EAE8DC" : 
 		backgroundColor = "#1B1B1B";
 	
 	window.onload = function () {
@@ -54,8 +53,8 @@ function App() {
 						<Route exact path="/works" component={WorksPage} />
 						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/inprogress" component={InProgress} />
-						<Route exact path="/blog" component={NotFound} />
-						<Route exact path="/blog/:id" component={NotFound} />
+						<Route exact path="/blog" component={InProgress} />
+						<Route exact path="/blog/:id" component={InProgress} />
 
 						<Route component={NotFound} />
 					</Switch>

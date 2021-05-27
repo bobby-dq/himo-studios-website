@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 // Blog Components
 
 export interface IBlog {
+    id: string,
     title: string,
     author: string,
     date: string,
@@ -15,6 +16,7 @@ export interface IBlog {
 export const blogData: () => IBlog[] = () => {
     return [
         {
+            id: 'blog-1',
             title: "7 Essential Things Each Website Should Have",
             author: "Bobby Quilacio - Web Developer",
             date: "May 27, 2021",
