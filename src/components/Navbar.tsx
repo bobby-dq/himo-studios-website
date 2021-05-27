@@ -17,7 +17,10 @@ interface INavbar {
 export const Navbar: FunctionComponent<INavbar> = (props) => { 
     const location = useLocation().pathname;
     let textColor;
-    location === "/services" || location==="/contact" ? textColor = "#1B1B1B" : textColor = "#EAE8DC";
+    location === "/services" || 
+        location==="/contact" || 
+        location === ("/blog")? 
+        textColor = "#1B1B1B" : textColor = "#EAE8DC";
     // console.log(props.showLogo);
 
     // Hooks and States
@@ -231,7 +234,7 @@ const Sline = styled(motion.div)`
     width: 0.01%;
     position: absolute;
     top: 2.4rem;
-    left: 5rem;
+    left: 4rem;
 `;
 
 

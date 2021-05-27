@@ -12,7 +12,7 @@ import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { WorksPage } from './pages/WorksPage';
 import { ContactPage } from './pages/ContactPage';
-// import { BlogHome } from './blog/display/BlogHome';
+import { BlogHome } from './blog/display/BlogHome';
 // import { BlogInDepth } from './blog/display/BlogInDepth';
 
 // Components
@@ -23,15 +23,16 @@ import { Footer } from './components/Footer';
 import { InProgress } from './components/InProgress';
 import { NotFound } from './components/NotFound';
 
-// Styles and animations
-
-
 function App() {
+	// States
 	const [navbarOpen, setNavbarOpen] = useState(false);
+
+	// Background colors
 	let backgroundColor;
 	const location = useLocation();
 	location.pathname === "/services" || 
-		location.pathname ==="/contact" ? backgroundColor ="#EAE8DC" : 
+		location.pathname ==="/contact" ||
+		location.pathname === ("/blog") ? backgroundColor ="#EAE8DC" : 
 		backgroundColor = "#1B1B1B";
 	
 	window.onload = function () {
@@ -53,8 +54,8 @@ function App() {
 						<Route exact path="/works" component={WorksPage} />
 						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/inprogress" component={InProgress} />
-						<Route exact path="/blog" component={InProgress} />
-						<Route exact path="/blog/:id" component={InProgress} />
+						<Route exact path="/blog" component={BlogHome} />
+						<Route exact path="/blog/:blogid" component={InProgress} />
 
 						<Route component={NotFound} />
 					</Switch>

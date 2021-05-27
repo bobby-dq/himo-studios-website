@@ -25,6 +25,29 @@ export const pageAnimation = {
     }
 }
 
+export const blogMainImageAnimation = {
+    hidden: {
+        opacity: 0,
+    },
+
+    show: {
+        opacity: 1,
+        transition: {
+            duration: 0.33,
+            when: 'beforeChildren',
+            staggerChildren: 0.10
+        }
+    },
+
+    exit: {
+        scale: 0,
+        opacity: 0,
+        transition: {
+            duration: 0.33
+        }
+    }
+}
+
 export const workAnimation = {
     hidden: {
         opacity: 0,

@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
 
-export const Blog: FunctionComponent = () => {
+export const Blog2: FunctionComponent = () => {
     return (
         <div>
             <h1>
-                This it blog 1;
+                Website Essentials
             </h1>
         </div>
     );
