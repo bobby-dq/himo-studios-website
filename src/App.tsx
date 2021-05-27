@@ -12,8 +12,8 @@ import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { WorksPage } from './pages/WorksPage';
 import { ContactPage } from './pages/ContactPage';
-import { BlogHome } from './blog/display/BlogHome';
-import { BlogInDepth } from './blog/display/BlogInDepth';
+// import { BlogHome } from './blog/display/BlogHome';
+// import { BlogInDepth } from './blog/display/BlogInDepth';
 
 // Components
 import { Navbar } from './components/Navbar';
