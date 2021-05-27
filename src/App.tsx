@@ -13,7 +13,7 @@ import { ServicesPage } from './pages/ServicesPage';
 import { WorksPage } from './pages/WorksPage';
 import { ContactPage } from './pages/ContactPage';
 import { BlogHome } from './blog/display/BlogHome';
-// import { BlogInDepth } from './blog/display/BlogInDepth';
+import { BlogInDepth } from './blog/display/BlogInDepth';
 
 // Components
 import { Navbar } from './components/Navbar';
@@ -32,7 +32,7 @@ function App() {
 	const location = useLocation();
 	location.pathname === "/services" || 
 		location.pathname ==="/contact" ||
-		location.pathname === ("/blog") ? backgroundColor ="#EAE8DC" : 
+		location.pathname.includes("/blog") ? backgroundColor ="#EAE8DC" : 
 		backgroundColor = "#1B1B1B";
 	
 	window.onload = function () {
@@ -55,7 +55,7 @@ function App() {
 						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/inprogress" component={InProgress} />
 						<Route exact path="/blog" component={BlogHome} />
-						<Route exact path="/blog/:blogid" component={InProgress} />
+						<Route exact path="/blog/:blogid" component={BlogInDepth} />
 
 						<Route component={NotFound} />
 					</Switch>

@@ -32,19 +32,28 @@ const SBlogInDepth = styled(motion.div)`
     min-height: 100vh;
     padding: 5rem 10rem;
     color: #1b1b1b;
-    font-family: serif;
+    font-family: 'Merriweather', serif;
 
     h1 {
         font-family: 'Playfair Display', serif; 
-        font-size: 3.6rem; 
+        font-size: 3.6rem;
     }
 
     h2 {
-        font-size: 2.4rem;
+        font-family: 'Montserrat', sans-serif; 
+        font-size:3rem;
+        padding-bottom: 1rem;
     }
 
     p, li, a {
         font-size: 2.4rem;
+        padding-bottom: 1.5rem;
+        font-weight: lighter;
+    }
+
+    ul {
+        list-style: circle;
+        margin-left: 2rem;
     }
 
     em {
@@ -56,6 +65,10 @@ const SBlogInDepth = styled(motion.div)`
         padding: 5rem 2rem;
     }
 
+`;
+
+export const SDiv = styled.div`
+    margin-bottom: 2rem;
 `;
 
 

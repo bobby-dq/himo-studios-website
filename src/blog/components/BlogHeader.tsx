@@ -36,6 +36,7 @@ const SBlogHeader = styled(motion.div)`
         h1 {
             margin-bottom: 1rem;
         }
+        
     }
 
     .image-wrapper {

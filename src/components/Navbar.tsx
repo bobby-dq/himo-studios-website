@@ -19,7 +19,7 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
     let textColor;
     location === "/services" || 
         location==="/contact" || 
-        location === ("/blog")? 
+        location.includes("/blog")? 
         textColor = "#1B1B1B" : textColor = "#EAE8DC";
     // console.log(props.showLogo);
 
