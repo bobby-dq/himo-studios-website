@@ -12,7 +12,8 @@ import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { WorksPage } from './pages/WorksPage';
 import { ContactPage } from './pages/ContactPage';
-// import { FaqPage } from './pages/FaqPage';
+import { BlogHome } from './blog/display/BlogHome';
+import { BlogInDepth } from './blog/display/BlogInDepth';
 
 // Components
 import { Navbar } from './components/Navbar';
@@ -29,7 +30,10 @@ function App() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
 	let backgroundColor;
 	const location = useLocation();
-	location.pathname === "/services" || location.pathname==="/contact" ? backgroundColor ="#EAE8DC" : backgroundColor = "#1B1B1B";
+	location.pathname === "/services" || 
+		location.pathname ==="/contact" || 
+		location.pathname.includes("/blog") ? backgroundColor ="#EAE8DC" : 
+		backgroundColor = "#1B1B1B";
 	
 	window.onload = function () {
         setTimeout(function() {
@@ -48,9 +52,11 @@ function App() {
 						<Route exact path="/" component={HomePage} />
 						<Route exact path="/services" component={ServicesPage} />
 						<Route exact path="/works" component={WorksPage} />
-						{/* <Route exact path="/faq" component={FaqPage} /> */}
 						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/inprogress" component={InProgress} />
+						<Route exact path="/blog" component={BlogHome} />
+						<Route exact path="/blog/:id" component={BlogInDepth} />
+
 						<Route component={NotFound} />
 					</Switch>
 				</AnimatePresence>
