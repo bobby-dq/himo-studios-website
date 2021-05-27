@@ -49,8 +49,12 @@ export const Navbar: FunctionComponent<INavbar> = (props) => {
                         <Link style={{color: textColor}} to="/works"><p>3. WORK</p></Link>
                         <Sline transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: location === '/works'?'75%' :'0%'}}></Sline>
                     </Sli>
+                    <Sli className="nav-link">
+                        <Link style={{color: textColor}} to="/blog"><p>4. BLOG</p></Link>
+                        <Sline transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: location === '/blog'?'75%' :'0%'}}></Sline>
+                    </Sli>
                     <Sli className="nav-link ">
-                        <Link style={{color: textColor}} to="/contact"><p className="contact">4. CONTACT US!</p></Link>
+                        <Link style={{color: textColor}} to="/contact"><p className="contact">5. CONTACT US!</p></Link>
                         <Sline transition={{duration: 0.75}} initial={{width: '0%'}} animate={{ width: location === '/contact'?'75%' :'0%'}}></Sline>
                     </Sli>
                 </ul>
@@ -212,7 +216,7 @@ const Sli = styled(motion.li)`
     font-size: 1.6rem;
     font-weight: bold;
     letter-spacing: 3px;
-    padding-left: 5rem;
+    padding-left: 4rem;
     font-family: 'Montserrat', sans-serif;
     position: relative;
 

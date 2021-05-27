@@ -130,7 +130,7 @@ export const heroImageReveal = {
 export const serviceImageReveal = {
     hidden: {
         opacity: 0,
-        scale: 2,
+        scale: 0.1,
     },
     show : {
         opacity: 1,
