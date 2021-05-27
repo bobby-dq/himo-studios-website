@@ -1,3 +1,7 @@
+// Packages
+import { FunctionComponent } from 'react';
+
+// Blog Components
 
 export interface IBlog {
     title: string,
@@ -5,6 +9,7 @@ export interface IBlog {
     date: string,
     image: string,
     url: string,
+    componentPath: string
 }
 
 export const blogData: () => IBlog[] = () => {
@@ -13,9 +18,10 @@ export const blogData: () => IBlog[] = () => {
             title: "7 Essential Things Each Website Should Have",
             author: "Bobby Quilacio - Web Developer",
             date: "May 27, 2021",
-            image: "../blog/blog1/img/main-img.jpg",
-            url: "/blog/7-essential-things-each-website-should-have"
-        }
+            image: "../blog1/main-img.jpg",
+            url: "/blog/7-essential-things-each-website-should-have",
+            componentPath: "../blog1/Blog"
+        },
         
     ]
 }

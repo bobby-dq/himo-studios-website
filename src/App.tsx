@@ -54,8 +54,8 @@ function App() {
 						<Route exact path="/works" component={WorksPage} />
 						<Route exact path="/contact" component={ContactPage} />
 						<Route exact path="/inprogress" component={InProgress} />
-						<Route exact path="/blog" component={BlogHome} />
-						<Route exact path="/blog/:id" component={BlogInDepth} />
+						<Route exact path="/blog" component={NotFound} />
+						<Route exact path="/blog/:id" component={NotFound} />
 
 						<Route component={NotFound} />
 					</Switch>
