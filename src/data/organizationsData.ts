@@ -20,6 +20,17 @@ interface IOrganizationWorks {
 export const organizationData: () => IOrganization[] = () => {
     return [
         {
+            name: "Bonterra Built",
+            image: bonterraBuilt,
+            backgroundColor: "#1B1B1B",
+            works: [
+                {
+                    name: "Website",
+                    link: "http://www.bonterrabuilt.ca/"
+                }
+            ]
+        },
+        {
             name: "MoonCake Sweets n' Treats",
             image: moonCake,
             backgroundColor: "#EAE8DC",
@@ -60,17 +71,7 @@ export const organizationData: () => IOrganization[] = () => {
                 }
             ]
         }, 
-        {
-            name: "Bonterra Built",
-            image: bonterraBuilt,
-            backgroundColor: "#1B1B1B",
-            works: [
-                {
-                    name: "Website (Prototype Stage)",
-                    link: "http://bonterra-built.s3-website.ca-central-1.amazonaws.com/"
-                }
-            ]
-        },
+        
         {
             name: "The Golddigger",
             image: theGoldDigger,

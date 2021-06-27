@@ -21,7 +21,7 @@ export const Organizations: FunctionComponent = () => {
                 <SLine></SLine>
             </SOrgTitle>
             <SOrgDisplay>
-                {data.map(d => <SOrganization variants={workAnimation} style={{background: d.backgroundColor}} key={d.name}><motion.img variants={serviceImageReveal} src={d.image} alt={d.name}/></SOrganization>)}
+                {data.map(d => <SOrganization variants={workAnimation}  key={d.name}><motion.img variants={serviceImageReveal} src={d.image} alt={d.name}/></SOrganization>)}
             </SOrgDisplay>
         </SOrganizations>
 
@@ -42,8 +42,7 @@ const SOrgDisplay = styled(motion.div)`
 `;
 
 const SOrganization = styled(motion.div)`
-    border: 0.5rem solid #43A498;
-    background: white;
+    background: transparent;
     display: flex;
     align-items: center;
     width: 100%;

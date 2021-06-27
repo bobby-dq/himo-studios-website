@@ -15,7 +15,7 @@ interface IWork {
 export const Work: FunctionComponent<IWork> = (props) => {
     const [hover, setHover] = useState(false);
     return (
-        <SWork variants={workAnimation} style={{background: props.work.backgroundColor}} onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)} >
+        <SWork variants={workAnimation} onMouseEnter={() => setHover(true)} onMouseLeave={()=>setHover(false)} >
             <motion.img variants={serviceImageReveal} src={props.work.image} alt={props.work.name}/>
             <div className={`overlay ${hover ? 'hovered' : ''}`} >
                 <h1>{props.work.name}</h1>
@@ -32,7 +32,7 @@ export const Work: FunctionComponent<IWork> = (props) => {
 }
 
 const SWork = styled(motion.div)`
-    border: 0.5rem solid #43A498;
+    background: transparent;
     display: flex;
     align-items: center;
     width: 100%;
@@ -62,9 +62,10 @@ const SWork = styled(motion.div)`
         background: rgba(67, 164, 152, 0.75);
         font-family: 'Montserrat', sans-serif;
         color: #1b1b1b;
-        transition: transform 0.33s ease;
+        transition: all 0.33s ease-in-out;
         z-index: 1;
         cursor: auto;
+        opacity: 0;
 
         h1{
             font-size: 2.4rem;
@@ -86,6 +87,7 @@ const SWork = styled(motion.div)`
     
     }
     .hovered {
-        transform: translateX(100%)
+        transform: translateX(100%);
+        opacity: 1;
     }
 `;
